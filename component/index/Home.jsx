@@ -32,11 +32,11 @@ const Home = () => {
 
 				<div className='bg'></div>
 				<div className='img-holder-icons'>
-					<Image src='/img/home-icons.png' width={1140} height={375} objectFit='cover' />
+					<Image src='/img/home-icons.png' width={1100} height={375} objectFit='cover' />
 				</div>
 
 				<div className='img-holder-pc'>
-					<Image src='/img/home-pc.png' width={1140} height={690} objectFit='contain' />
+					<Image src='/img/home-pc.png' width={1100} height={690} objectFit='contain' />
 				</div>
 			</section>
 
@@ -93,8 +93,8 @@ const Home = () => {
 				}
 
 				.img-holder-pc {
-					position: absolute;
-					top: 429px;
+					position: relative;
+					top: 56px;
 				}
 			`}</style>
 		</>
