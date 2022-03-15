@@ -1,0 +1,59 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	scroll-behavior: smooth;
+	font-size: 18px;
+	color: #1a1a1a;
+	overflow-x: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+.container {
+	max-width: 1220px;
+	margin: auto;
+	padding: 0px 60px;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 64px;
+	color: #2c2c2c;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.ai-c {
+	align-items: center;
+}
+
+.jc-c {
+	justify-content: center;
+}
+
+.jc-sb {
+	justify-content: space-between;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
