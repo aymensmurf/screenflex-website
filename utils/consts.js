@@ -57,3 +57,102 @@ export const SOLUTIONS = [
 			"Manage your screens professionally and securely, the solution helps you to easily create, share and control your marketing messages on any digital display, from anywhere you want.",
 	},
 ];
+
+export const PRICING = [
+	{
+		title: "Free Trail",
+		price: "$0",
+		duration: "/ 14 Days",
+		description: "This is our most affordable plan to get started!",
+		options: [
+			{
+				title: "Unlimited Screens",
+				checked: true,
+			},
+			{
+				title: "Full features",
+				checked: true,
+			},
+			{
+				title: "Emails Back up",
+				checked: true,
+			},
+			{
+				title: "Screens Planing",
+				checked: true,
+			},
+			{
+				title: "Email support",
+				checked: false,
+			},
+			{
+				title: "Free design services",
+				checked: false,
+			},
+		],
+	},
+	{
+		title: "Premium",
+		price: "$89",
+		duration: "/ Month",
+		description: "896 of our clients choose this plan. Get the best value.",
+		options: [
+			{
+				title: "Unlimited Screens",
+				checked: true,
+			},
+			{
+				title: "Full features",
+				checked: true,
+			},
+			{
+				title: "Emails Back up",
+				checked: true,
+			},
+			{
+				title: "Screens Planing",
+				checked: true,
+			},
+			{
+				title: "Email support",
+				checked: false,
+			},
+			{
+				title: "Free design services",
+				checked: false,
+			},
+		],
+	},
+	{
+		title: "Enterprise",
+		price: "Costume price",
+		duration: "",
+		description: "For larger business or those seeking advanced services.",
+		options: [
+			{
+				title: "Unlimited Screens",
+				checked: true,
+			},
+			{
+				title: "Full features",
+				checked: true,
+			},
+			{
+				title: "Emails Back up",
+				checked: true,
+			},
+			{
+				title: "Screens Planing",
+				checked: true,
+			},
+			{
+				title: "Email support",
+				checked: true,
+			},
+			{
+				title: "Free design services",
+				checked: true,
+			},
+		],
+	},
+];
