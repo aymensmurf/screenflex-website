@@ -8,19 +8,19 @@ const Brands = () => {
 					<h2>These brands trust us</h2>
 
 					<div className='brands flex ai-c jc-sb' style={{ gap: 40 }}>
-						<div className='img-container'>
+						<div className='img-wrapper'>
 							<Image src='/img/brands/journey.png' alt='TheJourney' layout='fill' objectFit='contain' />
 						</div>
-						<div className='img-container'>
+						<div className='img-wrapper'>
 							<Image src='/img/brands/wifak.png' alt='Wifak Bank' layout='fill' objectFit='contain' />
 						</div>
-						<div className='img-container'>
+						<div className='img-wrapper'>
 							<Image src='/img/brands/sesame.png' alt='Sesame University' layout='fill' objectFit='contain' />
 						</div>
-						<div className='img-container'>
+						<div className='img-wrapper'>
 							<Image src='/img/brands/bos.png' alt='BOS' layout='fill' objectFit='contain' />
 						</div>
-						<div className='img-container'>
+						<div className='img-wrapper'>
 							<Image src='/img/brands/carthage.png' alt='Carthage Solution' layout='fill' objectFit='contain' />
 						</div>
 					</div>
@@ -38,7 +38,7 @@ const Brands = () => {
 					margin-bottom: 53px;
 				}
 
-				.img-container {
+				.img-wrapper {
 					width: 100%;
 					height: 35px;
 					position: relative;
@@ -54,7 +54,7 @@ const Brands = () => {
 						padding: 10px 30px;
 					}
 
-					.img-container {
+					.img-wrapper {
 						width: 100px;
 						min-width: 100px;
 						height: 35px;

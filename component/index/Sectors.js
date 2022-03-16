@@ -22,7 +22,7 @@ const Sectors = () => {
 									<Image src='/img/sectors/education.png' width={323} height={184} objectFit='contain' />
 								</div>
 							</div>
-							<p>Educarion</p>
+							<p>Education</p>
 						</div>
 					</div>
 				</div>
@@ -35,8 +35,8 @@ const Sectors = () => {
 				}
 
 				.container {
-					padding-right: 140px;
-					padding-left: 140px;
+					padding-right: 120px;
+					padding-left: 120px;
 				}
 
 				h2 {
@@ -65,7 +65,7 @@ const Sectors = () => {
 				}
 
 				.img-wrapper {
-					transition: all 300ms ease;
+					transition: all 500ms ease;
 				}
 
 				.container-img:hover .img-wrapper {
