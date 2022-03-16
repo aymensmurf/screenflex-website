@@ -40,6 +40,11 @@ h3 {
 	font-size: 38px;
 	color: #2b2b2b;
 }
+h4 {
+	font-weight: 600;
+	font-size: 32px;
+	color: #171717;
+}
 
 .flex {
 	display: flex;

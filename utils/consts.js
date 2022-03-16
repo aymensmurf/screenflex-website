@@ -156,3 +156,36 @@ export const PRICING = [
 		],
 	},
 ];
+
+export const WHYS = [
+	{
+		img: "/img/why/1.svg",
+		title: "Effortless usage",
+		description: "Our software helps you easily create visually engaging content that stimulates sales.",
+	},
+	{
+		img: "/img/why/2.svg",
+		title: "Digital signage advertising",
+		description: "Adjust quickly when you need to update an existing one or create a new one.",
+	},
+	{
+		img: "/img/why/3.svg",
+		title: "Client retention",
+		description: "A digital screen creates an enjoyable atmosphere where they are kept busy and entertined.",
+	},
+	{
+		img: "/img/why/4.svg",
+		title: "Compatibility",
+		description: "Smoothly upload any type of image, sound, text or video. Screenflex supports most formats.",
+	},
+	{
+		img: "/img/why/5.svg",
+		title: "Unleash Creativity",
+		description: "Use a combination of our design tools to create eye-catching displays.",
+	},
+	{
+		img: "/img/why/6.svg",
+		title: "High level of security",
+		description: "Our security system gives your business the peace of mind it needs and deserves.",
+	},
+];
