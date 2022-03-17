@@ -7,13 +7,10 @@ const Footer = () => {
 			<footer>
 				<div className='bg'>
 					<div className='container flex flex-column ai-c'>
-						<h3>
-							Take your client communication to the <br />
-							next level with Screenflex.
-						</h3>
-						<p>
-							Be the first to know when Screenflex launches. Early access users <br />
-							will receive an extended free trial and early bird pricing options.
+						<h3 className='title'>Take your client communication to the next level with Screenflex.</h3>
+						<p className='desc'>
+							Be the first to know when Screenflex launches. Early access users will receive an extended free trial and
+							early bird pricing options.
 						</p>
 
 						<div className='btn'>Get a Demo</div>
@@ -22,8 +19,8 @@ const Footer = () => {
 					<div className='footer'>
 						<hr />
 
-						<div className='flex ai-c jc-sb' style={{ marginTop: 36 }}>
-							<ul className='flex ai-c' style={{ gap: 30 }}>
+						<div className='links flex ai-c jc-sb' style={{ marginTop: 36 }}>
+							<ul className='flex ai-c'>
 								<li>Privacy Policy</li>
 								<li>Terms and Conditions</li>
 								<li>Contact</li>
@@ -38,7 +35,9 @@ const Footer = () => {
 
 						<div className='flex flex-column jc-c'>
 							<p className='powered-by'>Powered by</p>
-							<p className='innovant-studio'>Innovant Studio</p>
+							<a href='https://innovant.studio/' target='_blank' rel='norefferer noopener'>
+								<p className='innovant-studio'>Innovant Studio</p>
+							</a>
 							<p className='all-rights'>© 2022 Screenflex All rights reserved</p>
 						</div>
 					</div>
@@ -50,7 +49,10 @@ const Footer = () => {
 								Your browser does not support the video tag.
 							</video>
 						</div>
-						<Image src='/img/footer/home.png' width={1140} height={505} objectFit='contain' />
+
+						<div className='img-screens-wrapper'>
+							<Image src='/img/footer/home.png' layout='fill' objectFit='contain' />
+						</div>
 					</div>
 				</div>
 			</footer>
@@ -72,19 +74,24 @@ const Footer = () => {
 				}
 
 				.container {
-					padding-top: 12%;
+					padding-top: 300px;
 				}
 
-				h3 {
-					text-align: center;
-					color: #fff;
-				}
-
+				h3,
 				p {
-					line-height: 30px;
 					text-align: center;
+				}
+
+				h3.title {
+					color: #fff;
+					max-width: 695px;
+				}
+
+				p.desc {
+					line-height: 30px;
 					color: #fff;
 					margin-top: 34px;
+					max-width: 574px;
 				}
 
 				.btn {
@@ -122,6 +129,7 @@ const Footer = () => {
 					list-style-type: none;
 					padding: 0;
 					margin: 0;
+					gap: 30px;
 				}
 
 				li {
@@ -134,7 +142,7 @@ const Footer = () => {
 					font-size: 12px;
 					line-height: 12px;
 					color: #f7f9fd;
-					margin-top: 20px;
+					margin-top: 40px;
 				}
 				.innovant-studio {
 					font-weight: 600;
@@ -150,6 +158,12 @@ const Footer = () => {
 					margin-top: 25px;
 				}
 
+				.img-screens-wrapper {
+					width: 1140px;
+					height: 505px;
+					position: relative;
+				}
+
 				.video-container {
 					position: absolute;
 					top: 0px;
@@ -159,7 +173,7 @@ const Footer = () => {
 
 				.container-video {
 					position: absolute;
-					top: 50px;
+					top: 11%;
 					left: 50%;
 					transform: translate(-50%, 0);
 				}
@@ -167,6 +181,82 @@ const Footer = () => {
 				.container-video video {
 					width: 100%;
 					object-fit: cover;
+				}
+
+				@media only screen and (max-width: 1230px) {
+					.img-screens-wrapper {
+						width: 800px;
+					}
+
+					.container-video {
+						top: 23%;
+					}
+
+					.container {
+						padding-top: 200px;
+					}
+				}
+
+				@media only screen and (max-width: 830px) {
+					.img-screens-wrapper {
+						width: 600px;
+					}
+
+					.container-video {
+						top: 30%;
+					}
+
+					.container {
+						padding-top: 150px;
+					}
+				}
+
+				@media only screen and (max-width: 630px) {
+					.img-screens-wrapper {
+						width: 400px;
+					}
+
+					.container-video {
+						top: 38%;
+					}
+
+					.container {
+						padding-top: 100px;
+					}
+				}
+
+				@media only screen and (max-width: 747px) {
+					h3.title {
+						margin-top: 40px;
+					}
+
+					.footer {
+						margin-top: 45px;
+					}
+
+					.links {
+						display: grid;
+						grid-template-columns: 1fr;
+						place-items: center;
+						gap: 46px;
+					}
+
+					hr {
+						display: none;
+						clear: both;
+					}
+
+					.bg {
+						min-height: 600px;
+					}
+
+					ul {
+						gap: 20px;
+					}
+
+					li {
+						font-size: 12px;
+					}
 				}
 			`}</style>
 		</>

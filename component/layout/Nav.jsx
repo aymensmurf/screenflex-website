@@ -54,7 +54,7 @@ const Nav = ({ isStaticNav = false }) => {
 
 	return (
 		<>
-			<nav id='main-nav' className='display-desktop'>
+			<nav id='main-nav'>
 				<div className='container'>
 					<div className='flex ai-c jc-sb' style={{ width: "100%" }}>
 						<Link href='/'>
@@ -63,25 +63,35 @@ const Nav = ({ isStaticNav = false }) => {
 							</div>
 						</Link>
 
-						<ul>
-							<li>
-								<Link href='/#our-solution'>Our Solution</Link>
-							</li>
-							<li>
-								<Link href='/#how-it-works'>How it works</Link>
-							</li>
-							<li>
-								<Link href='/#pricing'>Pricing</Link>
-							</li>
-							<li>
-								<Link href='/#features'>Features</Link>
-							</li>
-						</ul>
+						<div className='display-desktop'>
+							<ul>
+								<li>
+									<Link href='/#our-solution'>Our Solution</Link>
+								</li>
+								<li>
+									<Link href='/#how-it-works'>How it works</Link>
+								</li>
+								<li>
+									<Link href='/#pricing'>Pricing</Link>
+								</li>
+								<li>
+									<Link href='/#features'>Features</Link>
+								</li>
+							</ul>
+						</div>
 
-						<div className='flex ai-c' style={{ gap: 9 }}>
-							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
-								<div className='btn btn-free-trial'>Free trial</div>
-							</a>
+						<div className='display-desktop'>
+							<div className='flex ai-c' style={{ gap: 9 }}>
+								<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+									<div className='btn btn-free-trial'>Free trial</div>
+								</a>
+							</div>
+						</div>
+
+						<div className='display-mobile'>
+							<div style={{ cursor: "pointer" }}>
+								<Image src='/img/menu.svg' width={33} height={22} objectFit='contain' />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,6 +154,17 @@ const Nav = ({ isStaticNav = false }) => {
 					background: #fff;
 					color: #5463ff;
 					border: 1px solid #5463ff;
+				}
+
+				@media only screen and (max-width: 950px) {
+					.display-desktop {
+						display: none;
+						clear: both;
+					}
+
+					.display-mobile {
+						display: block;
+					}
 				}
 			`}</style>
 		</>
