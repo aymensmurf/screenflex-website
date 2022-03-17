@@ -28,6 +28,10 @@ const Brands = () => {
 			</section>
 
 			<style jsx>{`
+				section {
+					margin-top: 111px;
+				}
+
 				.container {
 					padding-right: 190px;
 					padding-left: 190px;

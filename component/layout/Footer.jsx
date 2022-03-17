@@ -72,7 +72,7 @@ const Footer = () => {
 				}
 
 				.container {
-					padding-top: 235px;
+					padding-top: 12%;
 				}
 
 				h3 {
@@ -109,8 +109,8 @@ const Footer = () => {
 					max-width: 1380px;
 					margin: auto;
 					margin-top: 136px;
-					margin-bottom: 36px;
 					padding: 0px 60px;
+					padding-bottom: 60px;
 				}
 
 				hr {
@@ -134,7 +134,7 @@ const Footer = () => {
 					font-size: 12px;
 					line-height: 12px;
 					color: #f7f9fd;
-					margin-top: 10px;
+					margin-top: 20px;
 				}
 				.innovant-studio {
 					font-weight: 600;
@@ -152,7 +152,7 @@ const Footer = () => {
 
 				.video-container {
 					position: absolute;
-					top: 100px;
+					top: 0px;
 					left: 50%;
 					transform: translate(-50%, -50%);
 				}
@@ -166,7 +166,6 @@ const Footer = () => {
 
 				.container-video video {
 					width: 100%;
-					height: 320px;
 					object-fit: cover;
 				}
 			`}</style>
