@@ -19,8 +19,8 @@ const PricingCard = ({ title, price, duration, description, options }) => {
 				<p className='desc'>{description}</p>
 
 				<div className='options' style={{ marginTop: 33 }}>
-					{options.map(({ title: optionTitle, checked }) => (
-						<div className='flex ai-c' style={{ gap: 19, marginBottom: 22 }}>
+					{options.map(({ title: optionTitle, checked }, i) => (
+						<div key={i} className='flex ai-c' style={{ gap: 19, marginBottom: 22 }}>
 							{checked ? (
 								title === "Premium" ? (
 									<Image src='/img/pricing/checked-white.svg' width={16} height={10} objectFit='contain' />
