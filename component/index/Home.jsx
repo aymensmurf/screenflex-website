@@ -10,10 +10,9 @@ const Home = () => {
 				<div className='container'>
 					<div className='flex flex-column ai-c' style={{ position: "relative", zIndex: 1 }}>
 						<h1>All screens, One place.</h1>
-						<p>
-							Manage screens. Deliver world class experiences. Make the <br /> best out of digital signage.
-						</p>
-						<div className='options'>
+						<p>Manage screens. Deliver world class experiences. Make the best out of digital signage.</p>
+
+						<div className='options display-desktop'>
 							<div
 								className={type === "restaurants" ? "option active" : "option"}
 								onClick={() => {
@@ -29,23 +28,26 @@ const Home = () => {
 								Education
 							</div>
 						</div>
+
+						<div className='display-mobile'>
+							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+								<div className='btn btn-free-trial'>Free trial</div>
+							</a>
+						</div>
 					</div>
 				</div>
 
 				<div className='bg'>
-					<div className='img-holder-icons'>
-						<Image src='/img/home-icons.png' width={1100} height={375} objectFit='cover' />
-					</div>
-
 					<div className='img-holder-pc'>
-						<div className='container-video'>
-							<video muted autoPlay loop>
-								<source src='/video/home.webm' type='video/mp4' />
-								Your browser does not support the video tag.
-							</video>
+						<div className='img-screen-wrapper'>
+							<div className='container-video'>
+								<video muted autoPlay loop>
+									<source src='/video/home.webm' type='video/mp4' />
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<Image src='/img/home-pc.png' layout='fill' objectFit='contain' />
 						</div>
-
-						<Image src='/img/home-pc.png' width={1100} height={690} objectFit='contain' />
 					</div>
 				</div>
 			</section>
@@ -57,7 +59,8 @@ const Home = () => {
 				}
 
 				p {
-					margin-top: 14px;
+					margin-top: 20px;
+					max-width: 520px;
 				}
 
 				.options {
@@ -103,19 +106,95 @@ const Home = () => {
 				.img-holder-pc {
 					position: absolute;
 					left: 50%;
-					top: 108px;
+					top: 154px;
 					transform: translateX(-50%);
 				}
 
 				.container-video {
 					position: absolute;
-					top: 40px;
-					left: 0;
+					top: 26px;
+					left: 50%;
+					transform: translateX(-50%);
 				}
 
 				.container-video video {
-					width: 65%;
+					height: 340px;
 					object-fit: cover;
+				}
+
+				.img-screen-wrapper {
+					width: 100vw;
+					height: 528px;
+					position: relative;
+				}
+
+				.btn-free-trial {
+					min-width: 150px;
+					padding: 13px 34px;
+					border-radius: 30px;
+					font-weight: 600;
+					font-size: 18px;
+					background: linear-gradient(45deg, #aeb5ff 0%, #5463ff 80%);
+					filter: drop-shadow(0px 10px 25px rgba(84, 99, 255, 0.25));
+					color: #fff;
+					border: 1px solid #fff;
+					margin-top: 35px;
+					transition: all 0.3s ease;
+				}
+
+				.btn-free-trial:hover {
+					background: #fff;
+					color: #5463ff;
+					border: 1px solid #5463ff;
+				}
+
+				@media only screen and (max-width: 950px) {
+					.display-desktop {
+						display: none;
+						clear: both;
+					}
+
+					.display-mobile {
+						display: block;
+					}
+
+					p {
+						margin-top: 35px;
+					}
+
+					.bg {
+						height: 322px;
+					}
+
+					.img-holder-pc {
+						top: 108px;
+					}
+
+					.img-screen-wrapper {
+						height: 240px;
+					}
+
+					.container-video {
+						top: 12px;
+					}
+
+					.container-video video {
+						height: 154px;
+					}
+				}
+
+				@media only screen and (max-width: 425px) {
+					.img-screen-wrapper {
+						height: 180px;
+					}
+
+					.container-video {
+						top: 9px;
+					}
+
+					.container-video video {
+						height: 116px;
+					}
 				}
 			`}</style>
 		</>

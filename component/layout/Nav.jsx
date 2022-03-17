@@ -81,11 +81,9 @@ const Nav = ({ isStaticNav = false }) => {
 						</div>
 
 						<div className='display-desktop'>
-							<div className='flex ai-c' style={{ gap: 9 }}>
-								<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
-									<div className='btn btn-free-trial'>Free trial</div>
-								</a>
-							</div>
+							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+								<div className='btn-free-trial'>Free trial</div>
+							</a>
 						</div>
 
 						<div className='display-mobile'>
@@ -134,20 +132,17 @@ const Nav = ({ isStaticNav = false }) => {
 					color: #2b2b2b;
 				}
 
-				.btn {
+				.btn-free-trial {
 					min-width: 150px;
 					padding: 13px 34px;
 					border-radius: 30px;
 					font-weight: 600;
 					font-size: 18px;
-					transition: all 0.3s ease;
-				}
-
-				.btn-free-trial {
 					background: linear-gradient(45deg, #aeb5ff 0%, #5463ff 80%);
 					filter: drop-shadow(0px 10px 25px rgba(84, 99, 255, 0.25));
 					color: #fff;
 					border: 1px solid #fff;
+					transition: all 0.3s ease;
 				}
 
 				.btn-free-trial:hover {
