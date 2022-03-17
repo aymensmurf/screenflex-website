@@ -42,12 +42,22 @@ const Footer = () => {
 							<p className='all-rights'>© 2022 Screenflex All rights reserved</p>
 						</div>
 					</div>
+
+					<div className='video-container'>
+						<div className='container-video'>
+							<video muted autoPlay loop>
+								<source src='/video/home.webm' type='video/mp4' />
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<Image src='/img/footer/home.png' width={1140} height={505} objectFit='contain' />
+					</div>
 				</div>
 			</footer>
 
 			<style jsx>{`
 				footer {
-					margin-top: 400px;
+					padding-top: 300px;
 					position: relative;
 				}
 
@@ -58,7 +68,7 @@ const Footer = () => {
 					background-position: top center;
 					background-repeat: no-repeat;
 					background-size: cover;
-					overflow: hidden;
+					position: relative;
 				}
 
 				.container {
@@ -138,6 +148,26 @@ const Footer = () => {
 					line-height: 13px;
 					color: #dcdff1;
 					margin-top: 25px;
+				}
+
+				.video-container {
+					position: absolute;
+					top: 100px;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				.container-video {
+					position: absolute;
+					top: 50px;
+					left: 50%;
+					transform: translate(-50%, 0);
+				}
+
+				.container-video video {
+					width: 100%;
+					height: 320px;
+					object-fit: cover;
 				}
 			`}</style>
 		</>
