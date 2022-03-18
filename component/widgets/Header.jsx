@@ -9,7 +9,7 @@ const Header = () => {
 						<div className='grid'>
 							<div>
 								<div className='flex ai-c' style={{ gap: 7 }}>
-									<Image src='/img/education/icon.svg' width={24} height={21} objectFit='contain' />
+									<Image src='/img/education/icon.svg' alt='' width={24} height={21} objectFit='contain' />
 									<p className='category'>Education</p>
 								</div>
 

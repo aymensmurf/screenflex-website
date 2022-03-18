@@ -17,8 +17,8 @@ const Why = () => {
 						<div className='display-desktop-why'>
 							<div className='grid' style={{ marginTop: 93, alignItems: "flex-start" }}>
 								{WHYS.map(({ img, title, description }, i) => (
-									<ScrollAnimation animateOnce animateIn='fadeInUp' delay={i * 100}>
-										<WhyCard key={i} img={img} title={title} description={description} />
+									<ScrollAnimation key={i} animateOnce animateIn='fadeInUp' delay={i * 100}>
+										<WhyCard img={img} title={title} description={description} />
 									</ScrollAnimation>
 								))}
 							</div>

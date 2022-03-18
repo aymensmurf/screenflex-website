@@ -23,8 +23,8 @@ const Features = () => {
 						<div className='display-desktop-features' style={{ marginTop: 68 }}>
 							<div className='grid ai-fs'>
 								{FEATURES.map(({ img, title, description }, i) => (
-									<ScrollAnimation animateOnce animateIn='fadeInUp' delay={i * 100}>
-										<Feature key={i} img={img} title={title} description={description} />
+									<ScrollAnimation key={i} animateOnce animateIn='fadeInUp' delay={i * 100}>
+										<Feature img={img} title={title} description={description} />
 									</ScrollAnimation>
 								))}
 							</div>

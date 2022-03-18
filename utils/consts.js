@@ -189,3 +189,26 @@ export const WHYS = [
 		description: "Our security system gives your business the peace of mind it needs and deserves.",
 	},
 ];
+
+export const EDUCATIONS_SLIDER = [
+	{
+		title: "Dropbox gallery",
+		img: "/img/education/1.png",
+	},
+	{
+		title: "Calander",
+		img: "/img/education/2.png",
+	},
+	{
+		title: "Google slides",
+		img: "/img/education/3.png",
+	},
+	{
+		title: "Dynamic news",
+		img: "/img/education/4.png",
+	},
+	{
+		title: "Countdown",
+		img: "/img/education/5.png",
+	},
+];
