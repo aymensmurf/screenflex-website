@@ -1,4 +1,4 @@
-import { Brands, Features, Home, Pricing, Sectors, Solutions, Why } from "../component/index";
+import { Brands, Features, Home, Pricing, Sectors, Solutions, Why, PreFooter } from "../component/index";
 import Layout from "../component/layout/Layout";
 
 const Index = () => {
@@ -11,6 +11,7 @@ const Index = () => {
 			<Solutions />
 			<Pricing />
 			<Why />
+			<PreFooter />
 		</Layout>
 	);
 };

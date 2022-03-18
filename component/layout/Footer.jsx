@@ -59,7 +59,7 @@ const Footer = () => {
 
 			<style jsx>{`
 				footer {
-					padding-top: 300px;
+					padding-top: 400px;
 					position: relative;
 				}
 
@@ -184,6 +184,10 @@ const Footer = () => {
 				}
 
 				@media only screen and (max-width: 1230px) {
+					footer {
+						padding-top: 300px;
+					}
+
 					.img-screens-wrapper {
 						width: 800px;
 					}
@@ -198,6 +202,10 @@ const Footer = () => {
 				}
 
 				@media only screen and (max-width: 830px) {
+					footer {
+						padding-top: 250px;
+					}
+
 					.img-screens-wrapper {
 						width: 600px;
 					}
@@ -208,20 +216,6 @@ const Footer = () => {
 
 					.container {
 						padding-top: 150px;
-					}
-				}
-
-				@media only screen and (max-width: 630px) {
-					.img-screens-wrapper {
-						width: 400px;
-					}
-
-					.container-video {
-						top: 38%;
-					}
-
-					.container {
-						padding-top: 100px;
 					}
 				}
 
@@ -256,6 +250,24 @@ const Footer = () => {
 
 					li {
 						font-size: 12px;
+					}
+				}
+
+				@media only screen and (max-width: 630px) {
+					footer {
+						padding-top: 200px;
+					}
+
+					.img-screens-wrapper {
+						width: 400px;
+					}
+
+					.container-video {
+						top: 38%;
+					}
+
+					.container {
+						padding-top: 100px;
 					}
 				}
 			`}</style>

@@ -5,5 +5,6 @@ import Features from "./Features";
 import Solutions from "./Solutions";
 import Pricing from "./Pricing";
 import Why from "./Why";
+import PreFooter from "./PreFooter";
 
-export { Home, Brands, Sectors, Features, Solutions, Pricing, Why };
+export { Home, Brands, Sectors, Features, Solutions, Pricing, Why, PreFooter };
