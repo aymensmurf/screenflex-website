@@ -5,6 +5,7 @@ import { Solution } from "../widgets";
 const Solutions = () => {
 	return (
 		<>
+			<a name='how-it-works' />
 			<section>
 				<div className='container'>
 					<div className='flex ai-fs jc-sb'>
@@ -19,7 +20,9 @@ const Solutions = () => {
 						</div>
 
 						<div className='display-desktop-1023'>
-							<div className='btn'>Get started</div>
+							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+								<div className='btn'>Get started</div>
+							</a>
 						</div>
 					</div>
 

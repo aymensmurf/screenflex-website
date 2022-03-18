@@ -13,7 +13,9 @@ const Footer = () => {
 							early bird pricing options.
 						</p>
 
-						<div className='btn'>Get a Demo</div>
+						<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+							<div className='btn'>Get a Demo</div>
+						</a>
 					</div>
 
 					<div className='footer'>

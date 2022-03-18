@@ -8,6 +8,7 @@ const Pricing = () => {
 
 	return (
 		<>
+			<a name='pricing' />
 			<section>
 				<div className='container'>
 					<div className='flex ai-fs jc-c' style={{ gap: 12 }}>
@@ -45,6 +46,7 @@ const Pricing = () => {
 						{PRICING.map(({ title, price, duration, description, options }, i) => (
 							<PricingCard
 								key={i}
+								type={type}
 								title={title}
 								price={price}
 								duration={duration}

@@ -4,6 +4,7 @@ import { WhyCard } from "../widgets";
 const Why = () => {
 	return (
 		<>
+			<a name='features' />
 			<section>
 				<div className='container'>
 					<div className='why'>

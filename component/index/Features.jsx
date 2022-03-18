@@ -6,6 +6,7 @@ import FeaturesMobileSlider from "./FeaturesMobile";
 const Features = () => {
 	return (
 		<>
+			<a name='our-solution' />
 			<section>
 				<div className='container'>
 					<div className='features'>
