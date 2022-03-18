@@ -10,9 +10,9 @@ const Slider = () => {
 			const slide = document.getElementById("slide-2");
 
 			slide.classList.remove("active");
-			window.requestAnimationFrame(function () {
+			setTimeout(() => {
 				slide.classList.add("active");
-			});
+			}, 300);
 
 			let _elements = [...elements];
 
@@ -61,6 +61,14 @@ const Slider = () => {
 					margin-left: -219px;
 				}
 
+				.slide {
+					transition: all 300ms;
+				}
+
+				.active {
+					transform: scale(1.25);
+				}
+
 				.img-wrapper {
 					width: 390px;
 					height: 212px;
@@ -70,15 +78,6 @@ const Slider = () => {
 				p {
 					color: #1a1a1a;
 					margin-top: 20px;
-				}
-
-				.slide {
-					transform: scale(1);
-				}
-
-				.active {
-					transform: scale(1.25);
-					transition: all 300s;
 				}
 			`}</style>
 		</>
