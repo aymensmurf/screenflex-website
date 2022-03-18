@@ -53,6 +53,16 @@ const Solution = ({ img, title, description }) => {
 					color: #525252;
 					margin-top: 12px;
 				}
+
+				@media only screen and (max-width: 1023px) {
+					.content-container {
+						padding: 52px 0px;
+					}
+
+					.img-container {
+						height: 286px;
+					}
+				}
 			`}</style>
 		</>
 	);
