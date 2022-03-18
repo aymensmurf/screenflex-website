@@ -1,5 +1,6 @@
 import { WHYS } from "../../utils/consts";
 import { WhyCard } from "../widgets";
+import WhyMobile from "./WhyMobile";
 
 const Why = () => {
 	return (
@@ -10,10 +11,16 @@ const Why = () => {
 					<div className='why'>
 						<h4>Why Opt for Screenflex?</h4>
 
-						<div className='grid' style={{ marginTop: 93, alignItems: "flex-start" }}>
-							{WHYS.map(({ img, title, description }, i) => (
-								<WhyCard key={i} img={img} title={title} description={description} />
-							))}
+						<div className='display-desktop-why'>
+							<div className='grid' style={{ marginTop: 93, alignItems: "flex-start" }}>
+								{WHYS.map(({ img, title, description }, i) => (
+									<WhyCard key={i} img={img} title={title} description={description} />
+								))}
+							</div>
+						</div>
+
+						<div className='display-mobile-why' style={{ marginTop: 34 }}>
+							<WhyMobile />
 						</div>
 					</div>
 				</div>
@@ -43,6 +50,15 @@ const Why = () => {
 					column-gap: 104px;
 				}
 
+				.display-desktop-why {
+					display: block;
+				}
+
+				.display-mobile-why {
+					display: none;
+					clear: both;
+				}
+
 				@media only screen and (max-width: 1023px) {
 					.grid {
 						column-gap: 40px;
@@ -65,9 +81,14 @@ const Why = () => {
 					}
 				}
 
-				@media only screen and (max-width: 510px) {
-					.grid {
-						grid-template-columns: 1fr;
+				@media only screen and (max-width: 620px) {
+					.display-desktop-why {
+						display: none;
+						clear: both;
+					}
+
+					.display-mobile-why {
+						display: block;
 					}
 				}
 			`}</style>

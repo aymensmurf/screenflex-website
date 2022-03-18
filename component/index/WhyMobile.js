@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { FEATURES } from "../../utils/consts";
-import Feature from "../widgets/Feature";
+import { WHYS } from "../../utils/consts";
+import { WhyCard } from "../widgets";
 
-const FeaturesMobile = ({ sliderWidth = 243 }) => {
+const WhyMobile = ({ sliderWidth = 243 }) => {
 	const [activeIndex, setActiveIndex] = useState(1);
 	const [left, setLeft] = useState(0);
 
@@ -53,7 +53,7 @@ const FeaturesMobile = ({ sliderWidth = 243 }) => {
 	}, [activeIndex]);
 
 	const handleNext = () => {
-		if (activeIndex >= FEATURES.length) {
+		if (activeIndex >= WHYS.length) {
 			clickIndicator(1);
 		} else {
 			clickIndicator(activeIndex + 1);
@@ -62,7 +62,7 @@ const FeaturesMobile = ({ sliderWidth = 243 }) => {
 
 	const handlePrev = () => {
 		if (activeIndex <= 1) {
-			clickIndicator(FEATURES.length);
+			clickIndicator(WHYS.length);
 		} else {
 			clickIndicator(activeIndex - 1);
 		}
@@ -79,9 +79,9 @@ const FeaturesMobile = ({ sliderWidth = 243 }) => {
 				<div>
 					<div className='slider-wrapper'>
 						<div className='slider'>
-							{FEATURES.map(({ img, title, description }, index) => (
+							{WHYS.map(({ img, title, description }, index) => (
 								<div key={index} style={{ left, width: sliderWidth }} className='slider-item'>
-									<Feature img={img} title={title} description={description} />
+									<WhyCard img={img} title={title} description={description} centered />
 								</div>
 							))}
 						</div>
@@ -89,7 +89,7 @@ const FeaturesMobile = ({ sliderWidth = 243 }) => {
 
 					<div className='indicators-wrapper'>
 						<ul className='indicators'>
-							{FEATURES.map((item, index) => (
+							{WHYS.map((item, index) => (
 								<li
 									key={index}
 									className={index + 1 === activeIndex ? "active-indicator" : ""}
@@ -140,4 +140,4 @@ const FeaturesMobile = ({ sliderWidth = 243 }) => {
 	);
 };
 
-export default FeaturesMobile;
+export default WhyMobile;
