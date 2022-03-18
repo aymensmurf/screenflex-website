@@ -1,29 +1,36 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Sectors = () => {
 	return (
 		<>
 			<section>
 				<div className='container'>
-					<h2>Choose your sector</h2>
+					<ScrollAnimation animateOnce animateIn='fadeInUp'>
+						<h2>Choose your sector</h2>
+					</ScrollAnimation>
 
 					<div className='sectors'>
-						<div className='sector'>
-							<div className='container-img'>
-								<div className='img-wrapper'>
-									<Image src='/img/sectors/restaurant.png' width={323} height={184} objectFit='contain' />
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<div className='sector'>
+								<div className='container-img'>
+									<div className='img-wrapper'>
+										<Image src='/img/sectors/restaurant.png' width={323} height={184} objectFit='contain' />
+									</div>
 								</div>
+								<p>Restaurant</p>
 							</div>
-							<p>Restaurant</p>
-						</div>
-						<div className='sector'>
-							<div className='container-img'>
-								<div className='img-wrapper'>
-									<Image src='/img/sectors/education.png' width={323} height={184} objectFit='contain' />
+						</ScrollAnimation>
+						<ScrollAnimation animateOnce animateIn='fadeInUp' delay={300}>
+							<div className='sector'>
+								<div className='container-img'>
+									<div className='img-wrapper'>
+										<Image src='/img/sectors/education.png' width={323} height={184} objectFit='contain' />
+									</div>
 								</div>
+								<p>Education</p>
 							</div>
-							<p>Education</p>
-						</div>
+						</ScrollAnimation>
 					</div>
 				</div>
 			</section>

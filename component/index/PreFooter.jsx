@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const PreFooter = () => {
 	return (
@@ -6,11 +7,15 @@ const PreFooter = () => {
 			<section>
 				<div className='container'>
 					<div className='pre-footer'>
-						<h2>Screenflex makes managing screens easy</h2>
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<h2>Screenflex makes managing screens easy</h2>
+						</ScrollAnimation>
 
-						<div style={{ marginTop: 15 }}>
-							<Image src='/img/pre-footer.png' width={930} height={580} objectFit='contain' />
-						</div>
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<div style={{ marginTop: 15 }}>
+								<Image src='/img/pre-footer.png' width={930} height={580} objectFit='contain' />
+							</div>
+						</ScrollAnimation>
 					</div>
 				</div>
 			</section>

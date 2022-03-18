@@ -1,3 +1,4 @@
+import ScrollAnimation from "react-animate-on-scroll";
 import { WHYS } from "../../utils/consts";
 import { WhyCard } from "../widgets";
 import WhyMobile from "./WhyMobile";
@@ -9,19 +10,25 @@ const Why = () => {
 			<section>
 				<div className='container'>
 					<div className='why'>
-						<h4>Why Opt for Screenflex?</h4>
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<h4>Why Opt for Screenflex?</h4>
+						</ScrollAnimation>
 
 						<div className='display-desktop-why'>
 							<div className='grid' style={{ marginTop: 93, alignItems: "flex-start" }}>
 								{WHYS.map(({ img, title, description }, i) => (
-									<WhyCard key={i} img={img} title={title} description={description} />
+									<ScrollAnimation animateOnce animateIn='fadeInUp' delay={i * 100}>
+										<WhyCard key={i} img={img} title={title} description={description} />
+									</ScrollAnimation>
 								))}
 							</div>
 						</div>
 
-						<div className='display-mobile-why' style={{ marginTop: 34 }}>
-							<WhyMobile />
-						</div>
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<div className='display-mobile-why' style={{ marginTop: 34 }}>
+								<WhyMobile />
+							</div>
+						</ScrollAnimation>
 					</div>
 				</div>
 			</section>

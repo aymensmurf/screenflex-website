@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 import { SOLUTIONS } from "../../utils/consts";
 import { Solution } from "../widgets";
 
@@ -8,27 +9,31 @@ const Solutions = () => {
 			<a name='how-it-works' />
 			<section>
 				<div className='container'>
-					<div className='flex ai-fs jc-sb'>
-						<div>
-							<h2>Take your client communication</h2>
-							<div className='flex ai-fs'>
-								<h2>the next level with Screenflex.</h2>
-								<div className='display-desktop'>
-									<Image src='/img/solution/solution.png' width={84} height={84} objectFit='contain' />
+					<ScrollAnimation animateOnce animateIn='fadeInUp'>
+						<div className='flex ai-fs jc-sb'>
+							<div>
+								<h2>Take your client communication</h2>
+								<div className='flex ai-fs'>
+									<h2>the next level with Screenflex.</h2>
+									<div className='display-desktop'>
+										<Image src='/img/solution/solution.png' width={84} height={84} objectFit='contain' />
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div className='display-desktop-1023'>
-							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
-								<div className='btn'>Get started</div>
-							</a>
+							<div className='display-desktop-1023'>
+								<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+									<div className='btn'>Get started</div>
+								</a>
+							</div>
 						</div>
-					</div>
+					</ScrollAnimation>
 
 					<div className='grid' style={{ marginTop: 58 }}>
 						{SOLUTIONS.map(({ img, title, description }, i) => (
-							<Solution key={i} img={img} title={title} description={description} />
+							<ScrollAnimation animateOnce animateIn='fadeInUp' delay={200 * i}>
+								<Solution key={i} img={img} title={title} description={description} />
+							</ScrollAnimation>
 						))}
 					</div>
 				</div>

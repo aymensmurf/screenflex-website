@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 import { PricingCard } from "../widgets";
 import { PRICING } from "../../utils/consts";
 
@@ -11,48 +12,54 @@ const Pricing = () => {
 			<a name='pricing' />
 			<section>
 				<div className='container'>
-					<div className='flex ai-fs jc-c' style={{ gap: 12 }}>
-						<Image src='/img/pricing/pricing.png' width={92} height={92} objectFit='contain' />
-						<div style={{ marginTop: 11 }}>
-							<h2>Choose Your Plan</h2>
-							<p>No contracts, no surprise fees.</p>
-						</div>
-					</div>
-
-					<div className='flex jc-c'>
-						<div style={{ marginTop: 67 }}>
-							<div className='time-container flex ai-c jc-c'>
-								<div
-									className='time-wrapper'
-									onClick={() => {
-										setType("monthly");
-									}}>
-									Monthly
-								</div>
-								<div
-									className='time-wrapper'
-									onClick={() => {
-										setType("yearly");
-									}}>
-									Yearly
-								</div>
-
-								<div className='selector' style={{ left: type === "monthly" ? 9 : 141 }}></div>
+					<ScrollAnimation animateOnce animateIn='fadeInUp'>
+						<div className='flex ai-fs jc-c' style={{ gap: 12 }}>
+							<Image src='/img/pricing/pricing.png' width={92} height={92} objectFit='contain' />
+							<div style={{ marginTop: 11 }}>
+								<h2>Choose Your Plan</h2>
+								<p>No contracts, no surprise fees.</p>
 							</div>
 						</div>
-					</div>
+					</ScrollAnimation>
+
+					<ScrollAnimation animateOnce animateIn='fadeInUp'>
+						<div className='flex jc-c'>
+							<div style={{ marginTop: 67 }}>
+								<div className='time-container flex ai-c jc-c'>
+									<div
+										className='time-wrapper'
+										onClick={() => {
+											setType("monthly");
+										}}>
+										Monthly
+									</div>
+									<div
+										className='time-wrapper'
+										onClick={() => {
+											setType("yearly");
+										}}>
+										Yearly
+									</div>
+
+									<div className='selector' style={{ left: type === "monthly" ? 9 : 141 }}></div>
+								</div>
+							</div>
+						</div>
+					</ScrollAnimation>
 
 					<div className='grid' style={{ marginTop: 48 }}>
 						{PRICING.map(({ title, price, duration, description, options }, i) => (
-							<PricingCard
-								key={i}
-								type={type}
-								title={title}
-								price={price}
-								duration={duration}
-								description={description}
-								options={options}
-							/>
+							<ScrollAnimation animateOnce animateIn='fadeInUp' delay={200 * i}>
+								<PricingCard
+									key={i}
+									type={type}
+									title={title}
+									price={price}
+									duration={duration}
+									description={description}
+									options={options}
+								/>
+							</ScrollAnimation>
 						))}
 					</div>
 				</div>

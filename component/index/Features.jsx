@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 import { FEATURES } from "../../utils/consts";
 import { Feature } from "../widgets";
 import FeaturesMobileSlider from "./FeaturesMobile";
@@ -10,24 +11,30 @@ const Features = () => {
 			<section>
 				<div className='container'>
 					<div className='features'>
-						<div className='flex ai-c jc-c'>
-							<div className='display-desktop'>
-								<Image src='/img/features/money.png' width={77} height={77} objectFit='contain' />
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<div className='flex ai-c jc-c'>
+								<div className='display-desktop'>
+									<Image src='/img/features/money.png' width={77} height={77} objectFit='contain' />
+								</div>
+								<h3>How can Screenflex help your business?</h3>
 							</div>
-							<h3>How can Screenflex help your business?</h3>
-						</div>
+						</ScrollAnimation>
 
 						<div className='display-desktop-features' style={{ marginTop: 68 }}>
 							<div className='grid ai-fs'>
 								{FEATURES.map(({ img, title, description }, i) => (
-									<Feature key={i} img={img} title={title} description={description} />
+									<ScrollAnimation animateOnce animateIn='fadeInUp' delay={i * 100}>
+										<Feature key={i} img={img} title={title} description={description} />
+									</ScrollAnimation>
 								))}
 							</div>
 						</div>
 
-						<div className='display-mobile-features' style={{ marginTop: 34 }}>
-							<FeaturesMobileSlider />
-						</div>
+						<ScrollAnimation animateOnce animateIn='fadeInUp'>
+							<div className='display-mobile-features' style={{ marginTop: 34 }}>
+								<FeaturesMobileSlider />
+							</div>
+						</ScrollAnimation>
 					</div>
 				</div>
 			</section>

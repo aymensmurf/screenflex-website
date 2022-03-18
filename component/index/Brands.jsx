@@ -1,29 +1,38 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Brands = () => {
 	return (
 		<>
 			<section>
 				<div className='container'>
-					<h2>These brands trust us</h2>
+					<ScrollAnimation animateOnce animateIn='fadeInUp'>
+						<h2>These brands trust us</h2>
+					</ScrollAnimation>
 
-					<div className='brands flex ai-c jc-sb' style={{ gap: 40 }}>
-						<div className='img-wrapper'>
-							<Image src='/img/brands/journey.png' alt='TheJourney' layout='fill' objectFit='contain' />
+					<ScrollAnimation animateOnce animateIn='fadeInUp'>
+						<div className='brands flex ai-c jc-sb' style={{ gap: 40 }}>
+							<div className='img-wrapper'>
+								<Image src='/img/brands/journey.png' alt='TheJourney' layout='fill' objectFit='contain' />
+							</div>
+
+							<div className='img-wrapper'>
+								<Image src='/img/brands/wifak.png' alt='Wifak Bank' layout='fill' objectFit='contain' />
+							</div>
+
+							<div className='img-wrapper'>
+								<Image src='/img/brands/sesame.png' alt='Sesame University' layout='fill' objectFit='contain' />
+							</div>
+
+							<div className='img-wrapper'>
+								<Image src='/img/brands/bos.png' alt='BOS' layout='fill' objectFit='contain' />
+							</div>
+
+							<div className='img-wrapper'>
+								<Image src='/img/brands/carthage.png' alt='Carthage Solution' layout='fill' objectFit='contain' />
+							</div>
 						</div>
-						<div className='img-wrapper'>
-							<Image src='/img/brands/wifak.png' alt='Wifak Bank' layout='fill' objectFit='contain' />
-						</div>
-						<div className='img-wrapper'>
-							<Image src='/img/brands/sesame.png' alt='Sesame University' layout='fill' objectFit='contain' />
-						</div>
-						<div className='img-wrapper'>
-							<Image src='/img/brands/bos.png' alt='BOS' layout='fill' objectFit='contain' />
-						</div>
-						<div className='img-wrapper'>
-							<Image src='/img/brands/carthage.png' alt='Carthage Solution' layout='fill' objectFit='contain' />
-						</div>
-					</div>
+					</ScrollAnimation>
 				</div>
 			</section>
 
