@@ -78,6 +78,24 @@ const Sectors = () => {
 					color: #101010;
 					margin-top: 25px;
 				}
+
+				@media only screen and (max-width: 1023px) {
+					section {
+						margin-top: 70px;
+					}
+
+					.container {
+						padding-right: 36px;
+						padding-left: 36px;
+					}
+				}
+
+				@media only screen and (max-width: 767px) {
+					.sectors {
+						grid-template-columns: 1fr;
+						gap: 25px;
+					}
+				}
 			`}</style>
 		</>
 	);

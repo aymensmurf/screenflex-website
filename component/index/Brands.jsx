@@ -48,7 +48,11 @@ const Brands = () => {
 					position: relative;
 				}
 
-				@media only screen and (max-width: 767px) {
+				@media only screen and (max-width: 950px) {
+					section {
+						margin-top: 24px;
+					}
+
 					.container {
 						padding-right: 0px;
 						padding-left: 0px;
@@ -59,13 +63,8 @@ const Brands = () => {
 					}
 
 					.img-wrapper {
-						width: 100px;
 						min-width: 100px;
-						height: 35px;
-					}
-
-					h3 {
-						margin-bottom: 10px;
+						height: 40px;
 					}
 				}
 			`}</style>

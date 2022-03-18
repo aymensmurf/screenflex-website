@@ -10,6 +10,7 @@ const Feature = ({ img, title, description }) => {
 			</div>
 			<style jsx>{`
 				.feature {
+					height: 100%;
 					position: relative;
 					cursor: pointer;
 					background: #fff;
@@ -34,6 +35,12 @@ const Feature = ({ img, title, description }) => {
 					font-size: 14px;
 					margin-top: 11px;
 					color: #171717;
+				}
+
+				@media only screen and (max-width: 620px) {
+					.feature:hover {
+						filter: none;
+					}
 				}
 			`}</style>
 		</>
