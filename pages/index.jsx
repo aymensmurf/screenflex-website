@@ -1,5 +1,5 @@
-import { Brands, Features, Home, Pricing, Sectors, Solutions, Why, PreFooter } from "../component/index";
 import Layout from "../component/layout/Layout";
+import { Brands, Features, Home, Pricing, Sectors, Solutions, Why, PreFooter } from "../component/index";
 
 const Index = () => {
 	return (

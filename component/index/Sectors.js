@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const Sectors = () => {
@@ -22,14 +23,16 @@ const Sectors = () => {
 							</div>
 						</ScrollAnimation>
 						<ScrollAnimation animateOnce animateIn='fadeInUp' delay={300}>
-							<div className='sector'>
-								<div className='container-img'>
-									<div className='img-wrapper'>
-										<Image src='/img/sectors/education.png' width={323} height={184} objectFit='contain' />
+							<Link href='/education'>
+								<div className='sector'>
+									<div className='container-img'>
+										<div className='img-wrapper'>
+											<Image src='/img/sectors/education.png' width={323} height={184} objectFit='contain' />
+										</div>
 									</div>
+									<p>Education</p>
 								</div>
-								<p>Education</p>
-							</div>
+							</Link>
 						</ScrollAnimation>
 					</div>
 				</div>
