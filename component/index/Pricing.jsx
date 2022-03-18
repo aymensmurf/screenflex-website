@@ -105,6 +105,36 @@ const Pricing = () => {
 					grid-template-columns: 1fr 1fr 1fr;
 					gap: 48px;
 				}
+
+				@media only screen and (max-width: 1140px) {
+					.container {
+						padding-right: 60px;
+						padding-left: 60px;
+					}
+				}
+
+				@media only screen and (max-width: 940px) {
+					.container {
+						padding-right: 30px;
+						padding-left: 30px;
+					}
+
+					.grid {
+						gap: 25px;
+					}
+				}
+
+				@media only screen and (max-width: 940px) {
+					.grid {
+						grid-template-columns: 1fr 1fr;
+					}
+				}
+
+				@media only screen and (max-width: 640px) {
+					.grid {
+						grid-template-columns: 1fr;
+					}
+				}
 			`}</style>
 		</>
 	);

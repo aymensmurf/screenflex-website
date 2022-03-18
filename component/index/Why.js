@@ -41,6 +41,34 @@ const Why = () => {
 					row-gap: 42px;
 					column-gap: 104px;
 				}
+
+				@media only screen and (max-width: 1023px) {
+					.grid {
+						column-gap: 40px;
+					}
+
+					.why {
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+				}
+
+				@media only screen and (max-width: 950px) {
+					.grid {
+						grid-template-columns: 1fr 1fr;
+					}
+
+					.why {
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+				}
+
+				@media only screen and (max-width: 510px) {
+					.grid {
+						grid-template-columns: 1fr;
+					}
+				}
 			`}</style>
 		</>
 	);
