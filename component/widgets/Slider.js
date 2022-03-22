@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Image from "next/image";
-import { EDUCATIONS_SLIDER } from "../../utils/consts";
+import { EDUCATION_SLIDER } from "../../utils/consts";
 
 const Slider = () => {
-	const [elements, setElements] = useState(EDUCATIONS_SLIDER);
+	const [elements, setElements] = useState(EDUCATION_SLIDER);
 
 	const handleSlide = (i) => {
 		if (i !== 2) {
@@ -37,7 +37,11 @@ const Slider = () => {
 				</div>
 				<div className='grid' style={{ marginTop: 60 }}>
 					{elements.map(({ title, img }, i) => (
-						<div key={i} id={`slide-${i}`} className={i === 2 ? "slide active" : "slid"} onClick={() => handleSlide(i)}>
+						<div
+							key={i}
+							id={`slide-${i}`}
+							className={i === 2 ? "slide active" : "slide"}
+							onClick={() => handleSlide(i)}>
 							<div className='img-wrapper'>
 								<Image src={img} alt={title} layout='fill' objectFit='containe' />
 							</div>
@@ -51,6 +55,7 @@ const Slider = () => {
 				section {
 					text-align: center;
 					margin-top: 60px;
+					margin-bottom: 160px;
 				}
 
 				.grid {
@@ -62,6 +67,7 @@ const Slider = () => {
 				}
 
 				.slide {
+					cursor: pointer;
 					transition: all 300ms;
 				}
 

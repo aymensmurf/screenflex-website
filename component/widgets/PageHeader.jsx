@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Header = () => {
+const PageHeader = () => {
 	return (
 		<>
 			<section>
@@ -46,6 +46,7 @@ const Header = () => {
 
 				.header {
 					width: 100%;
+					height: 100%;
 					background: linear-gradient(-90deg, #aeb5ff 0%, #5463ff 80%);
 					padding: 96px 45px 82px 90px;
 					border-radius: 25px;
@@ -111,4 +112,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default PageHeader;

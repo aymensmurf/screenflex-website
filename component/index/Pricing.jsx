@@ -13,7 +13,7 @@ const Pricing = () => {
 			<section>
 				<div className='container'>
 					<ScrollAnimation animateOnce animateIn='fadeInUp'>
-						<div className='flex ai-fs jc-c' style={{ gap: 12 }}>
+						<div className='text-container'>
 							<Image src='/img/pricing/pricing.png' width={92} height={92} objectFit='contain' />
 							<div style={{ marginTop: 11 }}>
 								<h2>Choose Your Plan</h2>
@@ -74,6 +74,13 @@ const Pricing = () => {
 					padding-left: 160px;
 				}
 
+				.text-container {
+					display: flex;
+					align-items: flex-start;
+					justify-content: center;
+					gap: 12px;
+				}
+
 				p {
 					font-size: 20px;
 					letter-spacing: -0.02em;
@@ -121,10 +128,16 @@ const Pricing = () => {
 					}
 				}
 
-				@media only screen and (max-width: 940px) {
+				@media only screen and (max-width: 950px) {
 					.container {
 						padding-right: 30px;
 						padding-left: 30px;
+					}
+
+					.text-container {
+						display: grid;
+						gap: 0px;
+						text-align: center;
 					}
 
 					.grid {

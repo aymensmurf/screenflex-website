@@ -190,7 +190,7 @@ export const WHYS = [
 	},
 ];
 
-export const EDUCATIONS_SLIDER = [
+export const EDUCATION_SLIDER = [
 	{
 		title: "Dropbox gallery",
 		img: "/img/education/1.png",
@@ -210,5 +210,44 @@ export const EDUCATIONS_SLIDER = [
 	{
 		title: "Countdown",
 		img: "/img/education/5.png",
+	},
+];
+
+export const EDUCATION_SECTIONS = [
+	{
+		img: "/img/education/img-1.png",
+		icon: "/img/education/img-1-icon.png",
+		title: "Share real-time updates",
+		width: 350,
+		height: 388,
+		description:
+			"It is crucial to keep both the students and the campus administrators informed of official announcements, club activities, school events, and all kinds of information. Display clear messages with the right tone and find out how effective it is in giving the students a sense of order. Share the latest news, achievements, and accomplishments of both the school and the students to encourage them. Layout targeted and impactful messages. Content can be updated at a moment’s notice allowing the administration to adapt quickly to changing situations such as new regulations.",
+	},
+	{
+		img: "/img/education/img-2.png",
+		icon: "/img/education/img-2-icon.png",
+		title: "Spread awarenes",
+		width: 467,
+		height: 311,
+		description:
+			"I n this post covid era, keeping students aware of safety information and measures with dynamic images and videos is key to a safe environment. Insist on the necessity of social distancing. Reassure them by giving the necessary details and the step-by-step process of where to go and what to do in case of an emergency. You can incorporate videos, live broadcasts and real-time data feeds in your messages for better attention grabbing.",
+	},
+	{
+		img: "/img/education/img-3.png",
+		icon: "/img/education/img-3-icon.png",
+		title: "Nurture a sense of community",
+		width: 464,
+		height: 311,
+		description:
+			"Give the students control over some displays to serve as a creative outlet. This will strengthen the community and inspire leadership within it. Daily dynamic student-to-student communication, news, and updates can create a sense of calm and relieve pressure which is significantly impactful in a school or university environment.",
+	},
+	{
+		img: "/img/education/img-4.png",
+		icon: "/img/education/img-4-icon.png",
+		title: "Digital signage within the classroom",
+		width: 562,
+		height: 342,
+		description:
+			"Students today are digital natives, they know the ins and outs of the newest technologies and what it offers. Using digital to deliver highly engaging and targeted can be more compelling and effective in delivering the message while also entertaining.",
 	},
 ];

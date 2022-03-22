@@ -31,8 +31,8 @@ const Solutions = () => {
 
 					<div className='grid' style={{ marginTop: 58 }}>
 						{SOLUTIONS.map(({ img, title, description }, i) => (
-							<ScrollAnimation animateOnce animateIn='fadeInUp' delay={200 * i}>
-								<Solution key={i} img={img} title={title} description={description} />
+							<ScrollAnimation key={i} animateOnce animateIn='fadeInUp' delay={200 * i}>
+								<Solution img={img} title={title} description={description} />
 							</ScrollAnimation>
 						))}
 					</div>
