@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
-const Layout = ({ isStaticNav, children }) => {
+const Layout = ({ isStaticNav, transparent, children }) => {
 	return (
 		<>
 			<Head>
@@ -11,7 +11,7 @@ const Layout = ({ isStaticNav, children }) => {
 				<link rel='shortcut icon' href='/favicon.png' type='image/png' />
 			</Head>
 
-			<Nav isStaticNav={isStaticNav} />
+			<Nav isStaticNav={isStaticNav} transparent={transparent} />
 			{children}
 			<Footer />
 		</>

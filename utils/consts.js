@@ -60,7 +60,7 @@ export const SOLUTIONS = [
 
 export const PRICING = [
 	{
-		title: "Free Trail",
+		title: "Free Trial",
 		price: 0,
 		duration: "/ 14 Days",
 		description: "This is our most affordable plan to get started!",

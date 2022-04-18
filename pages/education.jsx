@@ -5,7 +5,7 @@ import { EDUCATION_SECTIONS } from "../utils/consts";
 
 const Index = () => {
 	return (
-		<Layout>
+		<Layout transparent>
 			<PageHeader />
 			<Slider />
 			<div className='container'>

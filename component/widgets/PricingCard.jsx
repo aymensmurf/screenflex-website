@@ -8,7 +8,7 @@ const PricingCard = ({ type, title, price, duration, description, options }) => 
 				{duration ? (
 					<div className='flex ai-fs jc-c' style={{ gap: 30, marginTop: 10, height: 48 }}>
 						<p className='price'>${price * (type === "monthly" ? 1 : 10)}</p>
-						<p className='duration'>{title === "Premium" && type !== "monthly" ? "/Yearly" : duration}</p>
+						<p className='duration'>{title === "Premium" && type !== "monthly" ? "/ Yearly" : duration}</p>
 					</div>
 				) : (
 					<div style={{ marginTop: 10, height: 48 }}>

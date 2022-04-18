@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Nav = ({ isStaticNav = false }) => {
+const Nav = ({ isStaticNav = false, transparent = false }) => {
+	const [isMedia1023, setIsMedia1023] = useState(false);
+
 	useEffect(() => {
 		let doc = document.documentElement;
 		let w = window;
@@ -52,6 +54,26 @@ const Nav = ({ isStaticNav = false }) => {
 		window.addEventListener("scroll", checkScroll);
 	}, []);
 
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+		if (mediaQuery.matches) {
+			setIsMedia1023(true);
+		} else {
+			setIsMedia1023(false);
+		}
+
+		const listner = mediaQuery.addEventListener("change", (mediaQuery) => {
+			if (mediaQuery.matches) {
+				setIsMedia1023(true);
+			} else {
+				setIsMedia1023(false);
+			}
+		});
+
+		return listner;
+	}, []);
+
 	return (
 		<>
 			<nav id='main-nav'>
@@ -59,23 +81,37 @@ const Nav = ({ isStaticNav = false }) => {
 					<div className='flex ai-c jc-sb' style={{ width: "100%" }}>
 						<Link href='/'>
 							<div style={{ cursor: "pointer" }}>
-								<Image src='/img/logo.svg' width={90} height={40} objectFit='contain' alt='Screenflex' />
+								<Image
+									src={transparent && isMedia1023 ? "/img/logo-w.svg" : "/img/logo.svg"}
+									width={90}
+									height={40}
+									objectFit='contain'
+									alt='Screenflex'
+								/>
 							</div>
 						</Link>
 
 						<div className='display-desktop'>
 							<ul>
 								<li>
-									<Link href='/#our-solution'>Our Solution</Link>
+									<a>
+										<Link href='/#our-solution'>Our Solution</Link>
+									</a>
 								</li>
 								<li>
-									<Link href='/#how-it-works'>How it works</Link>
+									<a>
+										<Link href='/#how-it-works'>How it works</Link>
+									</a>
 								</li>
 								<li>
-									<Link href='/#pricing'>Pricing</Link>
+									<a>
+										<Link href='/#pricing'>Pricing</Link>
+									</a>
 								</li>
 								<li>
-									<Link href='/#features'>Features</Link>
+									<a>
+										<Link href='/#features'>Features</Link>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -88,7 +124,12 @@ const Nav = ({ isStaticNav = false }) => {
 
 						<div className='display-mobile'>
 							<div style={{ cursor: "pointer" }}>
-								<Image src='/img/menu.svg' width={33} height={22} objectFit='contain' />
+								<Image
+									src={transparent && isMedia1023 ? "/img/menu-w.svg" : "/img/menu.svg"}
+									width={33}
+									height={22}
+									objectFit='contain'
+								/>
 							</div>
 						</div>
 					</div>
@@ -110,7 +151,7 @@ const Nav = ({ isStaticNav = false }) => {
 				}
 
 				#main-nav.bg-color {
-					background-color: #fff;
+					background: #fff;
 				}
 
 				.container {
@@ -129,6 +170,9 @@ const Nav = ({ isStaticNav = false }) => {
 
 				li {
 					font-size: 18px;
+				}
+
+				li a {
 					color: #2b2b2b;
 				}
 
@@ -138,17 +182,33 @@ const Nav = ({ isStaticNav = false }) => {
 					border-radius: 30px;
 					font-weight: 600;
 					font-size: 18px;
-					background: linear-gradient(45deg, #aeb5ff 0%, #5463ff 80%);
 					filter: drop-shadow(0px 10px 25px rgba(84, 99, 255, 0.25));
+					transition: all 0.3s ease;
+					background: linear-gradient(45deg, #aeb5ff 0%, #5463ff 80%);
 					color: #fff;
 					border: 1px solid #fff;
-					transition: all 0.3s ease;
 				}
 
 				.btn-free-trial:hover {
 					background: #fff;
 					color: #5463ff;
 					border: 1px solid #5463ff;
+				}
+
+				@media only screen and (max-width: 1023px) {
+					#main-nav.bg-color {
+						background: ${transparent ? "linear-gradient(-90deg, #aeb5ff 0%, #5463ff 80%)" : "#fff"};
+					}
+
+					li a {
+						color: ${transparent ? "#fff" : "#2b2b2b"};
+					}
+
+					.btn-free-trial {
+						background: ${transparent ? "#fff" : "linear-gradient(45deg, #aeb5ff 0%, #5463ff 80%)"};
+						color: ${transparent ? "#5463ff" : "#fff"};
+						border: ${transparent ? "1px solid #5463ff" : "1px solid #fff"};
+					}
 				}
 
 				@media only screen and (max-width: 950px) {

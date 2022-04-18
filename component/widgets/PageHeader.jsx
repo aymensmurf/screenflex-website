@@ -21,7 +21,7 @@ const PageHeader = () => {
 									et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
 								</p>
 
-								<div className='flex ai-c' style={{ marginTop: 25, gap: 20 }}>
+								<div className='flex ai-c flex-wrap' style={{ marginTop: 25, gap: 20 }}>
 									<div className='btn btn-start-now'>Start Now</div>
 									<div className='btn btn-get-demo'>Get Demo</div>
 								</div>
@@ -56,6 +56,7 @@ const PageHeader = () => {
 					display: grid;
 					grid-template-columns: 45% 55%;
 					gap: 10px;
+					grid-auto-flow: dense;
 				}
 
 				p.category {
@@ -106,6 +107,59 @@ const PageHeader = () => {
 					width: 100%;
 					height: 100%;
 					position: relative;
+				}
+
+				@media only screen and (max-width: 1023px) {
+					section {
+						padding-top: 0px;
+					}
+
+					.container {
+						padding-right: 0px;
+						padding-left: 0px;
+					}
+
+					.header {
+						border-radius: 0px;
+						padding: 150px 60px 82px;
+					}
+
+					.grid {
+						grid-template-columns: 1fr;
+						row-gap: 50px;
+					}
+
+					.img-wrapper {
+						width: 485px;
+						height: 300px;
+						grid-row: 1;
+					}
+				}
+
+				@media only screen and (max-width: 620px) {
+					.img-wrapper {
+						width: 300px;
+						height: 186px;
+					}
+				}
+
+				@media only screen and (max-width: 520px) {
+					.container {
+						padding-left: 0px !important;
+						padding-right: 0px !important;
+					}
+
+					.header {
+						padding-right: 20px;
+						padding-left: 20px;
+					}
+				}
+
+				@media only screen and (max-width: 430px) {
+					.img-wrapper {
+						width: 240px;
+						height: 160px;
+					}
 				}
 			`}</style>
 		</>
