@@ -27,7 +27,7 @@ const PageFooter = () => {
 
 			<style jsx>{`
 				section {
-					padding-top: 150px;
+					margin-top: 150px;
 				}
 
 				section * {
@@ -60,6 +60,41 @@ const PageFooter = () => {
 					width: 100%;
 					height: 100%;
 					position: relative;
+				}
+
+				@media only screen and (max-width: 1023px) {
+					section {
+						margin-top: 70px;
+					}
+
+					.grid {
+						grid-template-columns: 1fr;
+						gap: 30px;
+					}
+
+					.img-wrapper {
+						width: 430px;
+						height: 322px;
+					}
+				}
+
+				@media only screen and (max-width: 767px) {
+					.img-wrapper {
+						width: 319px;
+						height: 234px;
+					}
+
+					.header {
+						padding-right: 30px;
+						padding-left: 30px;
+					}
+				}
+
+				@media only screen and (max-width: 424px) {
+					.img-wrapper {
+						width: 220px;
+						height: 166px;
+					}
 				}
 			`}</style>
 		</>

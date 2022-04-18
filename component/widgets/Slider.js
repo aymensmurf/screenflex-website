@@ -72,7 +72,7 @@ const Slider = () => {
 				}
 
 				.active {
-					transform: scale(1.25);
+					// transform: scale(1.25);
 				}
 
 				.img-wrapper {

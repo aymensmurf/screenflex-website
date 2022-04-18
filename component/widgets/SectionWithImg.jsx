@@ -13,7 +13,7 @@ const SectionWithImg = ({ img, icon, title, description, width, height, right })
 
 					{icon && (
 						<div className='icon-container'>
-							<Image src={icon} width={124} height={124} objectFit='contain' />
+							<Image src={icon} width={100} height={100} objectFit='contain' />
 						</div>
 					)}
 				</div>
@@ -30,7 +30,7 @@ const SectionWithImg = ({ img, icon, title, description, width, height, right })
 					gap: 40px;
 					margin-bottom: 130px;
 					grid-auto-flow: dense;
-					grid-template-columns: ${right ? "45% 55%" : "55% 45%"};
+					grid-template-columns: ${right ? "45% calc(55% - 40px)" : "calc(55% - 40px) 45%"};
 				}
 
 				section > .img-container {
@@ -60,7 +60,8 @@ const SectionWithImg = ({ img, icon, title, description, width, height, right })
 
 				.img-wrapper {
 					position: relative;
-					width: ${width}px;
+					width: 100%;
+					max-width: ${width}px;
 					height: ${height}px;
 				}
 
@@ -68,8 +69,23 @@ const SectionWithImg = ({ img, icon, title, description, width, height, right })
 					position: absolute;
 					top: 0px;
 					transform: translateY(-50%);
-					right: ${right ? "10px" : "none"};
-					left: ${!right ? "10px" : "none"};
+					right: ${right ? "10px" : "auto"};
+					left: ${!right ? "10px" : "auto"};
+				}
+
+				@media only screen and (max-width: 1023px) {
+					section {
+						grid-template-columns: 1fr;
+						margin-bottom: 70px;
+					}
+
+					section > .img-container {
+						grid-column: 1;
+					}
+
+					section > .text-container {
+						grid-column: 1;
+					}
 				}
 			`}</style>
 		</>
