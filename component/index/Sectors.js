@@ -13,14 +13,16 @@ const Sectors = () => {
 
 					<div className='sectors'>
 						<ScrollAnimation animateOnce animateIn='fadeInUp'>
-							<div className='sector'>
-								<div className='container-img'>
-									<div className='img-wrapper'>
-										<Image src='/img/sectors/restaurant.png' width={323} height={184} objectFit='contain' />
+							<Link href='/restaurant'>
+								<div className='sector'>
+									<div className='container-img'>
+										<div className='img-wrapper'>
+											<Image src='/img/sectors/restaurant.png' width={323} height={184} objectFit='contain' />
+										</div>
 									</div>
+									<p>Restaurant</p>
 								</div>
-								<p>Restaurant</p>
-							</div>
+							</Link>
 						</ScrollAnimation>
 						<ScrollAnimation animateOnce animateIn='fadeInUp' delay={300}>
 							<Link href='/education'>

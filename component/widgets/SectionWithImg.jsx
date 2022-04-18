@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const SectionWithImg = ({ img, icon, title, description, width, height, right }) => {
+const SectionWithImg = ({ img, icon, title, description, width, height, right, horizantalPadding = true }) => {
 	return (
 		<>
 			<ScrollAnimation animateOnce animateIn='fadeInUp'>
@@ -53,7 +53,7 @@ const SectionWithImg = ({ img, icon, title, description, width, height, right })
 					width: 100%;
 					height: 100%;
 					background: linear-gradient(-90deg, #aeb5ff 0%, #5463ff 80%);
-					padding: 20px 40px;
+					padding: ${horizantalPadding ? "60px 40px" : "40px 0px"};
 					border-radius: 25px;
 					display: flex;
 					align-items: center;

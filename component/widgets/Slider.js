@@ -1,34 +1,6 @@
-import { useState } from "react";
 import Image from "next/image";
-import { EDUCATION_SLIDER } from "../../utils/consts";
 
-const Slider = () => {
-	const [elements, setElements] = useState(EDUCATION_SLIDER);
-
-	const handleSlide = (i) => {
-		if (i !== 2) {
-			const slide = document.getElementById("slide-2");
-
-			slide.classList.remove("active");
-			setTimeout(() => {
-				slide.classList.add("active");
-			}, 300);
-
-			let _elements = [...elements];
-
-			if (i > 2) {
-				const index = i - 2;
-				_elements = [..._elements.slice(index, _elements.length), ..._elements.slice(0, index)];
-			}
-
-			if (i < 2) {
-				const index = -i + 2;
-				_elements = [..._elements.slice(-index, _elements.length), ..._elements.slice(0, -index)];
-			}
-			setElements(_elements);
-		}
-	};
-
+const Slider = ({ slides = [] }) => {
 	return (
 		<>
 			<section>
@@ -36,12 +8,8 @@ const Slider = () => {
 					<h2>Screenflex makes managing screens throughout your campus easy</h2>
 				</div>
 				<div className='grid' style={{ marginTop: 60 }}>
-					{elements.map(({ title, img }, i) => (
-						<div
-							key={i}
-							id={`slide-${i}`}
-							className={i === 2 ? "slide active" : "slide"}
-							onClick={() => handleSlide(i)}>
+					{slides.map(({ title, img }, i) => (
+						<div key={i} id={`slide-${i}`} className={i === 2 ? "slide active" : "slide"}>
 							<div className='img-wrapper'>
 								<Image src={img} alt={title} layout='fill' objectFit='containe' />
 							</div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const PageHeader = () => {
+const PageHeader = ({ title, description, category, icon, img }) => {
 	return (
 		<>
 			<section>
@@ -9,17 +9,13 @@ const PageHeader = () => {
 						<div className='grid'>
 							<div>
 								<div className='flex ai-c' style={{ gap: 7 }}>
-									<Image src='/img/education/icon.svg' alt='' width={24} height={21} objectFit='contain' />
-									<p className='category'>Education</p>
+									<Image src={icon} alt='' width={24} height={21} objectFit='contain' />
+									<p className='category'>{category}</p>
 								</div>
 
-								<h3 className='title'>Screenflex Is Vital For Schools and Universities</h3>
+								<h3 className='title'>{title}</h3>
 
-								<p className='description'>
-									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-									labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-									et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-								</p>
+								<p className='description'>{description}</p>
 
 								<div className='flex ai-c flex-wrap' style={{ marginTop: 25, gap: 20 }}>
 									<div className='btn btn-start-now'>Start Now</div>
@@ -28,7 +24,7 @@ const PageHeader = () => {
 							</div>
 
 							<div className='img-wrapper'>
-								<Image src='/img/education/background.png' layout='fill' objectFit='contain' />
+								<Image src={img} layout='fill' objectFit='contain' />
 							</div>
 						</div>
 					</div>

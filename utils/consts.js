@@ -230,7 +230,7 @@ export const EDUCATION_SECTIONS = [
 		width: 467,
 		height: 311,
 		description:
-			"I n this post covid era, keeping students aware of safety information and measures with dynamic images and videos is key to a safe environment. Insist on the necessity of social distancing. Reassure them by giving the necessary details and the step-by-step process of where to go and what to do in case of an emergency. You can incorporate videos, live broadcasts and real-time data feeds in your messages for better attention grabbing.",
+			"In this post covid era, keeping students aware of safety information and measures with dynamic images and videos is key to a safe environment. Insist on the necessity of social distancing. Reassure them by giving the necessary details and the step-by-step process of where to go and what to do in case of an emergency. You can incorporate videos, live broadcasts and real-time data feeds in your messages for better attention grabbing.",
 	},
 	{
 		img: "/img/education/img-3.png",
@@ -249,5 +249,61 @@ export const EDUCATION_SECTIONS = [
 		height: 342,
 		description:
 			"Students today are digital natives, they know the ins and outs of the newest technologies and what it offers. Using digital to deliver highly engaging and targeted can be more compelling and effective in delivering the message while also entertaining.",
+	},
+];
+
+export const RESTAURANT_SLIDER = [
+	{
+		title: "Entertainment Display real time",
+		img: "/img/restaurant/1.png",
+	},
+	{
+		title: "Deals display",
+		img: "/img/restaurant/2.png",
+	},
+	{
+		title: "Waiting timer",
+		img: "/img/restaurant/3.png",
+	},
+	{
+		title: "Dynamic menu",
+		img: "/img/restaurant/4.png",
+	},
+	{
+		title: "Dynamic news",
+		img: "/img/restaurant/5.png",
+	},
+];
+
+export const RESTAURANT_SECTIONS = [
+	{
+		img: "/img/restaurant/img-1.png",
+		icon: "/img/restaurant/img-1-icon.png",
+		width: 536,
+		height: 300,
+		horizantalPadding: false,
+		title: "Display wait times",
+		description:
+			"Digital restaurant signage informs customers of wait times, so hungry customers are always aware. In addition, it pushes productivity and makes the restaurant more accountable for meeting those timed demands. It's a win-win situation that holds restaurant employees accountable while giving the customer peace of mind.",
+	},
+	{
+		img: "/img/restaurant/img-2.png",
+		icon: "/img/restaurant/img-2-icon.png",
+		width: 603,
+		height: 324,
+		horizantalPadding: false,
+		title: "Reducing Waiting Times",
+		description:
+			"Restaurant Digital signage can organize long lines of people by informing the customer of their place in line and how long they will be waiting. In addition, employees will also be informed so they know who is still waiting for their food or who is next in line. This organized process streamlines the ordering experience and helps improve customer service. ",
+	},
+	{
+		img: "/img/restaurant/img-3.png",
+		icon: "/img/restaurant/img-3-icon.png",
+		width: 537,
+		height: 320,
+		horizantalPadding: false,
+		title: "Display promotions",
+		description:
+			"What better way to show promotional items and daily specials and then put them on a digital billboard while the customer waits to order? This can increase last-minute purchase decisions, inform customers of new menu items and build brand awareness. It also gives customers something to look at while they wait in line.",
 	},
 ];
