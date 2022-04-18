@@ -23,8 +23,12 @@ const Footer = () => {
 
 						<div className='links flex ai-c jc-sb' style={{ marginTop: 36 }}>
 							<ul className='flex ai-c'>
-								<li>Privacy Policy</li>
-								<li>Terms and Conditions</li>
+								<li>
+									<Link href='/terms-and-conditions'>Terms and conditions</Link>
+								</li>
+								<li>
+									<Link href='/privacy-policy'>Privacy policy</Link>
+								</li>
 								<li>Contact</li>
 							</ul>
 
