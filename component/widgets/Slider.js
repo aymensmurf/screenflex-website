@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Slider = ({ slides = [] }) => {
 	return (
@@ -7,15 +9,40 @@ const Slider = ({ slides = [] }) => {
 				<div className='container'>
 					<h2>Screenflex makes managing screens throughout your campus easy</h2>
 				</div>
-				<div className='grid' style={{ marginTop: 60 }}>
-					{slides.map(({ title, img }, i) => (
-						<div key={i} id={`slide-${i}`} className={i === 2 ? "slide active" : "slide"}>
-							<div className='img-wrapper'>
-								<Image src={img} alt={title} layout='fill' objectFit='containe' />
-							</div>
-							<p>{title}</p>
-						</div>
-					))}
+
+				<div style={{ marginTop: 40 }}>
+					<Swiper
+						slidesPerView={1}
+						loop={true}
+						spaceBetween={10}
+						grabCursor={true}
+						centeredSlides={true}
+						navigation={false}
+						autoplay={true}
+						className='mySlider'
+						breakpoints={{
+							1540: {
+								slidesPerView: 4.15,
+							},
+							960: {
+								slidesPerView: 3.4,
+							},
+							590: {
+								slidesPerView: 2.1,
+							},
+							380: {
+								slidesPerView: 1.6,
+							},
+						}}>
+						{slides.map(({ title, img }, i) => (
+							<SwiperSlide key={i}>
+								<div className='img-wrapper'>
+									<Image src={img} alt={title} layout='fill' objectFit='containe' />
+								</div>
+								<p>{title}</p>
+							</SwiperSlide>
+						))}
+					</Swiper>
 				</div>
 			</section>
 
@@ -23,28 +50,11 @@ const Slider = ({ slides = [] }) => {
 				section {
 					text-align: center;
 					margin-top: 60px;
-					margin-bottom: 160px;
-				}
-
-				.grid {
-					width: calc(100% + 438px);
-					display: grid;
-					grid-template-columns: repeat(5, 1fr);
-					gap: 67px;
-					margin-left: -219px;
-				}
-
-				.slide {
-					cursor: pointer;
-					transition: all 300ms;
-				}
-
-				.active {
-					// transform: scale(1.25);
+					margin-bottom: 120px;
 				}
 
 				.img-wrapper {
-					width: 390px;
+					width: 340px;
 					height: 212px;
 					position: relative;
 				}
@@ -52,6 +62,22 @@ const Slider = ({ slides = [] }) => {
 				p {
 					color: #1a1a1a;
 					margin-top: 20px;
+				}
+
+				@media only screen and (max-width: 1225px) {
+					.img-wrapper {
+						width: 258px;
+						height: 160px;
+						position: relative;
+					}
+				}
+
+				@media only screen and (max-width: 560px) {
+					.img-wrapper {
+						width: 220px;
+						height: 160px;
+						position: relative;
+					}
 				}
 			`}</style>
 		</>
