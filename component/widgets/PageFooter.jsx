@@ -1,29 +1,33 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const PageFooter = () => {
 	return (
 		<>
-			<section>
-				<div className='container'>
-					<div className='header'>
-						<div className='grid'>
-							<div>
-								<h2 className='title'>Cost-effectiveness</h2>
+			<ScrollAnimation animateOnce animateIn='fadeInUp'>
+				<section>
+					<div className='container'>
+						<div className='header'>
+							<div className='grid'>
+								<div>
+									<h2 className='title'>Cost-effectiveness</h2>
 
-								<p className='description'>
-									Besides reducing paper waste and printing costs, effective digital signage in schools and universities
-									can relieve you from the cost of re-printing whenever you have new updates. As innovation progress and
-									interactive displays and kiosks become more cost-effective, the return on investment will increase.
-								</p>
-							</div>
+									<p className='description'>
+										Besides reducing paper waste and printing costs, effective digital signage in schools and
+										universities can relieve you from the cost of re-printing whenever you have new updates. As
+										innovation progress and interactive displays and kiosks become more cost-effective, the return on
+										investment will increase.
+									</p>
+								</div>
 
-							<div className='img-wrapper'>
-								<Image src='/img/education/footer.png' layout='fill' objectFit='contain' />
+								<div className='img-wrapper'>
+									<Image src='/img/education/footer.png' layout='fill' objectFit='contain' />
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</ScrollAnimation>
 
 			<style jsx>{`
 				section {

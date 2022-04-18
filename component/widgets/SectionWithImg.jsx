@@ -1,28 +1,31 @@
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const SectionWithImg = ({ img, icon, title, description, width, height, right }) => {
 	return (
 		<>
-			<section>
-				<div className='img-container'>
-					{img && (
-						<div className='img-wrapper'>
-							<Image src={img} layout='fill' objectFit='contain' />
-						</div>
-					)}
+			<ScrollAnimation animateOnce animateIn='fadeInUp'>
+				<section>
+					<div className='img-container'>
+						{img && (
+							<div className='img-wrapper'>
+								<Image src={img} layout='fill' objectFit='contain' />
+							</div>
+						)}
 
-					{icon && (
-						<div className='icon-container'>
-							<Image src={icon} width={100} height={100} objectFit='contain' />
-						</div>
-					)}
-				</div>
+						{icon && (
+							<div className='icon-container'>
+								<Image src={icon} width={100} height={100} objectFit='contain' />
+							</div>
+						)}
+					</div>
 
-				<div className='text-container'>
-					<h3>{title}</h3>
-					<p>{description}</p>
-				</div>
-			</section>
+					<div className='text-container'>
+						<h3>{title}</h3>
+						<p>{description}</p>
+					</div>
+				</section>
+			</ScrollAnimation>
 
 			<style jsx>{`
 				section {
