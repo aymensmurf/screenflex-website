@@ -30,7 +30,7 @@ const Home = () => {
 						</div>
 
 						<div className='display-mobile'>
-							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+							<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
 								<div className='btn btn-free-trial'>Free trial</div>
 							</a>
 						</div>

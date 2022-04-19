@@ -18,8 +18,12 @@ const PageHeader = ({ title, description, category, icon, img }) => {
 								<p className='description'>{description}</p>
 
 								<div className='flex ai-c flex-wrap' style={{ marginTop: 25, gap: 20 }}>
-									<div className='btn btn-start-now'>Start Now</div>
-									<div className='btn btn-get-demo'>Get Demo</div>
+									<a href='https://app.screenflex.pro/login' target='_blank' rel='noreferrer noopener'>
+										<div className='btn btn-start-now'>Start Now</div>
+									</a>
+									<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+										<div className='btn btn-get-demo'>Get Demo</div>
+									</a>
 								</div>
 							</div>
 

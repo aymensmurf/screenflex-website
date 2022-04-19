@@ -117,7 +117,7 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 						</div>
 
 						<div className='display-desktop'>
-							<a href='https://builder.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+							<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
 								<div className='btn-free-trial'>Free trial</div>
 							</a>
 						</div>
