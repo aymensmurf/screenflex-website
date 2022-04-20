@@ -6,6 +6,7 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 	const sectorRef = useRef(null);
 	const [isMedia1023, setIsMedia1023] = useState(false);
 	const [isSectorsOpen, setIsSectorsOpen] = useState(false);
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	useEffect(() => {
 		let doc = document.documentElement;
@@ -178,7 +179,11 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 						</div>
 
 						<div className='display-mobile'>
-							<div style={{ cursor: "pointer" }}>
+							<div
+								style={{ cursor: "pointer" }}
+								onClick={() => {
+									setIsMobileMenuOpen(!isMobileMenuOpen);
+								}}>
 								<Image
 									src={transparent && isMedia1023 ? "/img/menu-w.svg" : "/img/menu.svg"}
 									width={33}
@@ -187,6 +192,61 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 								/>
 							</div>
 						</div>
+
+						{isMobileMenuOpen && (
+							<div className='display-mobile mobile-menu'>
+								<ul>
+									<li
+										onClick={() => {
+											setIsMobileMenuOpen(false);
+										}}>
+										<a>
+											<Link href='/#our-solution'>Our Solution</Link>
+										</a>
+									</li>
+									<li
+										onClick={() => {
+											setIsMobileMenuOpen(false);
+										}}>
+										<a>
+											<Link href='/#how-it-works'>How it works</Link>
+										</a>
+									</li>
+									<li
+										onClick={() => {
+											setIsMobileMenuOpen(false);
+										}}>
+										<a>
+											<Link href='/#pricing'>Pricing</Link>
+										</a>
+									</li>
+									<li
+										onClick={() => {
+											setIsMobileMenuOpen(false);
+										}}>
+										<a>
+											<Link href='/#features'>Features</Link>
+										</a>
+									</li>
+									<li
+										onClick={() => {
+											setIsMobileMenuOpen(false);
+										}}>
+										<a>
+											<Link href='/restaurant'>Restaurant</Link>
+										</a>
+									</li>
+									<li
+										onClick={() => {
+											setIsMobileMenuOpen(false);
+										}}>
+										<a>
+											<Link href='/education'>Education</Link>
+										</a>
+									</li>
+								</ul>
+							</div>
+						)}
 					</div>
 				</div>
 			</nav>
@@ -231,7 +291,8 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 					z-index: 100;
 				}
 
-				li a {
+				li a,
+				li p {
 					color: #2b2b2b;
 				}
 
@@ -265,12 +326,18 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 					z-index: 99;
 				}
 
-				.sub-menu ul {
+				.sub-menu ul,
+				.mobile-menu ul {
 					padding: 10px 24px;
-					background: #fff;
 					flex-direction: column;
 					gap: 15px;
+					background: ${transparent ? "#5463ff" : "#fff"};
 				}
+
+				.mobile-menu ul {
+					padding: 0px;
+				}
+
 				.sub-menu ul li {
 					font-size: 16px;
 				}
@@ -287,12 +354,27 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 					animation: animation-opacity-50 0.3s ease-out;
 				}
 
+				.mobile-menu {
+					width: 100vw;
+					height: 100vh;
+					overflow-x: hidden;
+					overflow-y: auto;
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					padding: 140px 60px 40px;
+					z-index: -1;
+					animation: animation-opacity-100 0.5s ease-out;
+					background: ${transparent ? "linear-gradient(-90deg, #aeb5ff 0%, #5463ff 80%)" : "#fff"};
+				}
+
 				@media only screen and (max-width: 1023px) {
 					#main-nav.bg-color {
 						background: ${transparent ? "linear-gradient(-90deg, #aeb5ff 0%, #5463ff 80%)" : "#fff"};
 					}
 
-					li a {
+					li a,
+					li p {
 						color: ${transparent ? "#fff" : "#2b2b2b"};
 					}
 
@@ -304,6 +386,10 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 				}
 
 				@media only screen and (max-width: 950px) {
+					.mobile-menu ul {
+						background: transparent;
+					}
+
 					.display-desktop {
 						display: none;
 						clear: both;
