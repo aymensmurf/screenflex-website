@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Nav = ({ isStaticNav = false, transparent = false }) => {
+	const sectorRef = useRef(null);
 	const [isMedia1023, setIsMedia1023] = useState(false);
+	const [isSectorsOpen, setIsSectorsOpen] = useState(false);
 
 	useEffect(() => {
 		let doc = document.documentElement;
@@ -20,7 +22,9 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 			header.classList.remove("bg-color");
 		}
 
-		let checkScroll = function () {
+		const checkScroll = function () {
+			setIsSectorsOpen(false);
+
 			curScroll = w.scrollY || doc.scrollTop;
 
 			if (curScroll <= 80) {
@@ -40,7 +44,7 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 			prevScroll = curScroll;
 		};
 
-		let toggleHeader = function (direction, curScroll) {
+		const toggleHeader = function (direction, curScroll) {
 			if (direction === 2 && curScroll > 80) {
 				header.classList.add("hide");
 				prevDirection = direction;
@@ -74,6 +78,31 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 		return listner;
 	}, []);
 
+	useEffect(() => {
+		const header = document.getElementById("main-nav");
+
+		if (isSectorsOpen) {
+			header.classList.add("bg-color");
+		} else {
+			header.classList.remove("bg-color");
+		}
+	}, [isSectorsOpen]);
+
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (sectorRef.current && !sectorRef.current.contains(event.target)) {
+				setIsSectorsOpen(false);
+			} else {
+				setIsSectorsOpen(true);
+			}
+		};
+
+		document.addEventListener("mouseover", handleClickOutside);
+		return () => {
+			document.removeEventListener("mouseover", handleClickOutside);
+		};
+	}, []);
+
 	return (
 		<>
 			<nav id='main-nav'>
@@ -93,6 +122,32 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 
 						<div className='display-desktop'>
 							<ul>
+								<li ref={sectorRef} style={{ position: "relative" }}>
+									<p
+										style={{ zIndex: 100, position: "relative" }}
+										onClick={() => {
+											setIsSectorsOpen(true);
+										}}>
+										Sectors
+									</p>
+									{isSectorsOpen && (
+										<div className='sub-menu'>
+											<div style={{ height: 60 }}></div>
+											<ul>
+												<li>
+													<a>
+														<Link href='/restaurant'>Restaurant</Link>
+													</a>
+												</li>
+												<li>
+													<a>
+														<Link href='/education'>Education</Link>
+													</a>
+												</li>
+											</ul>
+										</div>
+									)}
+								</li>
 								<li>
 									<a>
 										<Link href='/#our-solution'>Our Solution</Link>
@@ -136,6 +191,8 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 				</div>
 			</nav>
 
+			{isSectorsOpen && <div className='overlay'></div>}
+
 			<style jsx>{`
 				#main-nav {
 					top: 0;
@@ -170,10 +227,16 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 
 				li {
 					font-size: 18px;
+					cursor: pointer;
+					z-index: 100;
 				}
 
 				li a {
 					color: #2b2b2b;
+				}
+
+				li:hover {
+					text-decoration: underline;
 				}
 
 				.btn-free-trial {
@@ -193,6 +256,35 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 					background: #fff;
 					color: #5463ff;
 					border: 1px solid #5463ff;
+				}
+
+				.sub-menu {
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 99;
+				}
+
+				.sub-menu ul {
+					padding: 10px 24px;
+					background: #fff;
+					flex-direction: column;
+					gap: 15px;
+				}
+				.sub-menu ul li {
+					font-size: 16px;
+				}
+
+				.overlay {
+					width: 100vw;
+					height: 100vh;
+					background: #000;
+					opacity: 0.5;
+					position: fixed;
+					top: 0;
+					left: 0;
+					z-index: 98;
+					animation: animation-opacity-50 0.3s ease-out;
 				}
 
 				@media only screen and (max-width: 1023px) {
