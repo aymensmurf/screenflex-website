@@ -38,7 +38,7 @@ const Brands = () => {
 
 			<style jsx>{`
 				section {
-					margin-top: 111px;
+					margin-top: 60px;
 				}
 
 				.container {

@@ -46,7 +46,7 @@ const SectionWithImg = ({ img, icon, title, description, width, height, right, h
 
 				p {
 					margin-top: 20px;
-					color: #1a1a1a;
+					color: #000860;
 				}
 
 				.img-container {

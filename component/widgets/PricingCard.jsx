@@ -70,25 +70,21 @@ const PricingCard = ({ type, title, price, duration, description, options }) => 
 				.title {
 					font-size: 23px;
 					text-align: center;
-					color: #121d2a;
 				}
 
 				.price {
 					font-size: 48px;
 					line-height: 48px;
-					color: #121d2a;
 				}
 
 				.price-no-duration {
 					font-size: 26px;
 					line-height: 26px;
 					text-align: center;
-					color: #121d2a;
 				}
 
 				.duration {
 					font-size: 17px;
-					color: #96a5ae;
 					margin-top: 10px;
 				}
 
@@ -96,13 +92,11 @@ const PricingCard = ({ type, title, price, duration, description, options }) => 
 					font-size: 14px;
 					line-height: 21px;
 					text-align: left;
-					color: #677177;
 					margin-top: 15px;
 				}
 
 				.option {
 					font-size: 15px;
-					color: #121d2a;
 				}
 
 				.btn {

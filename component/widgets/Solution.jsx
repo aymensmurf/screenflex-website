@@ -44,13 +44,11 @@ const Solution = ({ img, title, description }) => {
 					font-weight: 600;
 					font-size: 28px;
 					line-height: 38px;
-					color: #1a1a1a;
 				}
 
 				.description {
 					font-size: 18px;
 					text-align: left;
-					color: #525252;
 					margin-top: 12px;
 				}
 

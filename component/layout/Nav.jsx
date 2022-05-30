@@ -291,11 +291,6 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 					z-index: 100;
 				}
 
-				li a,
-				li p {
-					color: #2b2b2b;
-				}
-
 				li:hover {
 					text-decoration: underline;
 				}

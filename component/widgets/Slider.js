@@ -60,7 +60,7 @@ const Slider = ({ slides = [] }) => {
 				}
 
 				p {
-					color: #1a1a1a;
+					color: #000860;
 					margin-top: 20px;
 				}
 
