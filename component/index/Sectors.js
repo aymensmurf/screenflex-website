@@ -8,7 +8,14 @@ const Sectors = () => {
 			<section>
 				<div className='container'>
 					<ScrollAnimation animateOnce animateIn='fadeInUp'>
-						<h2>Choose your sector</h2>
+						<div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+							<div style={{ position: "relative", width: "fit-content" }}>
+								<h2>Industries we serve</h2>
+								<div className='underline-container' style={{ position: "absolute", top: 45, right: -5 }}>
+									<Image src='/img/sectors/underline.svg' alt='' width={133} height={26} />
+								</div>
+							</div>
+						</div>
 					</ScrollAnimation>
 
 					<div className='sectors'>
@@ -42,7 +49,7 @@ const Sectors = () => {
 
 			<style jsx>{`
 				section {
-					margin-top: 145px;
+					margin-top: 100px;
 					text-align: center;
 				}
 

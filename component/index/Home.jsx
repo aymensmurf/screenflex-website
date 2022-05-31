@@ -38,7 +38,6 @@ const Home = () => {
 								setType(activeIndex === OPTIONS.length + 1 ? OPTIONS[0] : OPTIONS[activeIndex - 1]);
 							}}
 							onSlidePrevTransitionStart={({ activeIndex }) => {
-								console.log("PREV", activeIndex);
 								setType(activeIndex === 0 ? OPTIONS[OPTIONS.length - 1] : OPTIONS[activeIndex - 1]);
 							}}
 							className='home-slider'>
