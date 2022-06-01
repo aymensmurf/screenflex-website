@@ -46,6 +46,13 @@ const Technologies = () => {
 					text-align: center;
 					margin-bottom: 37px;
 				}
+
+				@media only screen and (max-width: 1023px) {
+					h1 {
+						font-size: 36px;
+						line-height: 35px;
+					}
+				}
 			`}</style>
 		</>
 	);

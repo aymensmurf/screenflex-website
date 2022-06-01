@@ -112,34 +112,6 @@ h5 {
 	width: 100%;
 }
 
-.sectors-slider {
-	padding-bottom: 80px !important;
-}
-
-.sectors-slider .swiper-pagination {
-	width: fit-content !important;
-	position: relative !important;
-	top: 460px !important;
-	left: 50% !important;
-	display: flex !important;
-	transform: translateX(-50%) !important;
-	gap: 5px !important;
-}
-
-.sectors-slider .swiper-pagination-bullet {
-	width: 27px;
-	height: 12px;
-	border-radius: 25px;
-	background: #d6e7ff;
-	opacity: 1;
-	transition: all 300ms ease;
-}
-
-.sectors-slider .swiper-pagination-bullet-active {
-	width: 74px;
-	background-color: #ffc300;
-}
-
 @keyframes animation-opacity-50 {
 	from {
 		opacity: 0;
@@ -165,9 +137,8 @@ h5 {
 	}
 	h2 {
 		font-weight: 600;
-		font-size: 27px;
+		font-size: 36px;
 		line-height: 32px;
-		color: #313131;
 	}
 }
 

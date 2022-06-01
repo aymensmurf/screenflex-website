@@ -35,7 +35,7 @@ const Sectors = () => {
 						<div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
 							<div style={{ position: "relative", width: "fit-content" }}>
 								<h2>Industries we serve</h2>
-								<div className='underline-container' style={{ position: "absolute", top: 45, right: -5 }}>
+								<div className='underline-container'>
 									<Image src='/img/sectors/underline.svg' alt='' width={133} height={26} />
 								</div>
 							</div>
@@ -47,7 +47,7 @@ const Sectors = () => {
 					<div style={{ marginTop: 50, paddingBottom: 50 }}>
 						<Swiper
 							spaceBetween={23}
-							slidesPerView={3.5}
+							slidesPerView={1.3}
 							centeredSlides={true}
 							loop={true}
 							allowTouchMove={true}
@@ -55,7 +55,15 @@ const Sectors = () => {
 							pagination={{
 								clickable: true,
 							}}
-							className='sectors-slider'>
+							className='sectors-slider'
+							breakpoints={{
+								1110: {
+									slidesPerView: 3.5,
+								},
+								868: {
+									slidesPerView: 1.9,
+								},
+							}}>
 							{SECTORS.map(({ title, img }, i) => (
 								<SwiperSlide key={i}>
 									<Sector title={title} img={img} />
@@ -65,6 +73,36 @@ const Sectors = () => {
 					</div>
 				</ScrollAnimation>
 			</section>
+
+			<style>{`
+				.sectors-slider {
+					padding-bottom: 100px !important;
+				}
+
+				.sectors-slider .swiper-pagination {
+					width: fit-content !important;
+					position: relative !important;
+					top: 460px !important;
+					left: 50% !important;
+					display: flex !important;
+					transform: translateX(-50%) !important;
+					gap: 5px !important;
+				}
+
+				.sectors-slider .swiper-pagination-bullet {
+					width: 27px;
+					height: 12px;
+					border-radius: 25px;
+					background: #d6e7ff;
+					opacity: 1;
+					transition: all 300ms ease;
+				}
+
+				.sectors-slider .swiper-pagination-bullet-active {
+					width: 74px;
+					background-color: #ffc300;
+				}
+			`}</style>
 
 			<style jsx>{`
 				section {
@@ -81,6 +119,12 @@ const Sectors = () => {
 					margin-bottom: 43px;
 				}
 
+				.underline-container {
+					position: absolute;
+					top: 45px;
+					right: -5px;
+				}
+
 				@media only screen and (max-width: 1023px) {
 					section {
 						margin-top: 70px;
@@ -89,6 +133,20 @@ const Sectors = () => {
 					.container {
 						padding-right: 36px;
 						padding-left: 36px;
+					}
+				}
+				@media only screen and (max-width: 950px) {
+					.underline-container {
+						top: 30px;
+						right: -20px;
+					}
+				}
+				@media only screen and (max-width: 377px) {
+					.underline-container {
+						position: absolute;
+						top: 60px;
+						left: 50%;
+						transform: translateX(-50%);
 					}
 				}
 			`}</style>
@@ -107,10 +165,27 @@ const Sector = ({ title, img }) => {
 			<style jsx>{`
 				.sector {
 					width: 100%;
-					height: fit-content;
-					padding: 36px 42px 32px;
+					padding: 36px 20px 32px;
 					background-color: #f6f7ff;
 					border-radius: 15px;
+				}
+
+				@media only screen and (max-width: 1451px) {
+					.sector {
+						height: 420px;
+					}
+				}
+
+				@media only screen and (max-width: 1023px) {
+					h5 {
+						font-size: 22px;
+					}
+				}
+
+				@media only screen and (max-width: 510px) {
+					.sector {
+						height: 360px;
+					}
 				}
 			`}</style>
 		</>

@@ -10,7 +10,7 @@ const SectionImgBg = ({ title = "", description = "", img = "", bgColor = "#f6f7
 					<p>{description}</p>
 				</div>
 				<div className='img-container'>
-					<Image src={img} title={title} width={280} height={285} objectFit='contain' />
+					<Image src={img} title={title} width={240} height={240} objectFit='contain' />
 				</div>
 			</div>
 
@@ -19,8 +19,8 @@ const SectionImgBg = ({ title = "", description = "", img = "", bgColor = "#f6f7
 					border-radius: 15px;
 					padding: 56px 80px 56px 35px;
 					display: grid;
-					grid-template-columns: 1fr 1fr;
-					gap: 15px;
+					grid-template-columns: 70% 30%;
+					gap: 30px;
 					background: ${bgColor};
 				}
 
@@ -31,6 +31,16 @@ const SectionImgBg = ({ title = "", description = "", img = "", bgColor = "#f6f7
 
 				.img-container {
 					justify-self: end;
+				}
+
+				@media only screen and (max-width: 946px) {
+					.seciton-img-bg {
+						grid-template-columns: 1fr;
+					}
+
+					.img-container {
+						justify-self: start;
+					}
 				}
 			`}</style>
 		</>
