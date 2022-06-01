@@ -42,7 +42,7 @@ export const SOLUTIONS = [
 		img: "/img/solution/1.png",
 		title: "1 ACCESSIBLE FOR EVERYONE.",
 		description:
-			"Whether you&apos;re a beginner or an experienced designer, Screenflex will make the design process easier for you. With our simple drag-and-drop tools as well as easy-to-use and customizable gadgets, thesky is the limit.",
+			"Whether you're a beginner or an experienced designer, Screenflex will make the design process easier for you. With our simple drag-and-drop tools as well as easy-to-use and customizable gadgets, thesky is the limit.",
 	},
 	{
 		img: "/img/solution/2.png",

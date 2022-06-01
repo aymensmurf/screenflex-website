@@ -5,6 +5,7 @@ import WhyCard from "./WhyCard";
 import PageHeader from "./PageHeader";
 import Slider from "./Slider";
 import SectionWithImg from "./SectionWithImg";
+import SectionImgBg from "./SectionImgBg";
 import PageFooter from "./PageFooter";
 
-export { Feature, Solution, PricingCard, WhyCard, PageHeader, Slider, SectionWithImg, PageFooter };
+export { Feature, Solution, PricingCard, WhyCard, PageHeader, Slider, SectionWithImg, SectionImgBg, PageFooter };

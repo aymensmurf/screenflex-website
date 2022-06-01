@@ -41,7 +41,7 @@ const Features = () => {
 
 			<style jsx>{`
 				section {
-					margin-top: 145px;
+					margin-top: 110px;
 					text-align: center;
 				}
 

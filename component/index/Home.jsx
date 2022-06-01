@@ -7,16 +7,19 @@ const OPTIONS = ["restaurants", "education", "corporate", "retail"];
 
 const Home = () => {
 	const [type, setType] = useState("restaurants");
+	const [indicatorTop, setIndicatorTop] = useState(350);
 	const [indicatorLeft, setIndicatorLeft] = useState(0);
 	const [indicatorWidth, setIndicatorWidth] = useState(0);
 
 	useEffect(() => {
 		const elm = document.getElementById(type);
+		const scrollTop = document.documentElement.scrollTop;
 
 		if (elm) {
 			const elmRect = elm.getBoundingClientRect();
 
-			setIndicatorLeft(elmRect.left - 395);
+			setIndicatorTop(elmRect.top + scrollTop + 25);
+			setIndicatorLeft(elmRect.left + 6);
 			setIndicatorWidth(elmRect.width - 10);
 		}
 	}, [type]);
@@ -45,8 +48,6 @@ const Home = () => {
 								{OPTIONS.map((elm, i) => (
 									<Tab key={i} index={i} value={elm} isActive={type === elm} setter={setType} />
 								))}
-
-								<div className='indicator' />
 							</div>
 
 							{OPTIONS.map((elm, i) => (
@@ -65,6 +66,8 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+
+				<div className='indicator' />
 			</section>
 
 			<style jsx>{`
@@ -100,6 +103,7 @@ const Home = () => {
 					top: 30px;
 					transition: all 300ms ease;
 					width: ${indicatorWidth}px;
+					top: ${indicatorTop}px;
 					left: ${indicatorLeft}px;
 				}
 

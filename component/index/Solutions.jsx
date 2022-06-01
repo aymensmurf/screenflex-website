@@ -16,7 +16,7 @@ const Solutions = () => {
 								<div className='flex ai-fs'>
 									<h2>the next level with Screenflex.</h2>
 									<div className='display-desktop'>
-										<Image src='/img/solution/solution.png' width={84} height={84} objectFit='contain' />
+										<Image src='/img/solution/solution.png' width={60} height={60} objectFit='contain' />
 									</div>
 								</div>
 							</div>
@@ -41,7 +41,7 @@ const Solutions = () => {
 
 			<style jsx>{`
 				section {
-					margin-top: 145px;
+					margin-top: 71px;
 				}
 
 				.btn {

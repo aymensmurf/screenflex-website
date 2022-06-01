@@ -1,5 +1,16 @@
 import Layout from "../component/layout/Layout";
-import { Brands, Features, Home, Pricing, Sectors, Solutions, Why, PreFooter } from "../component/index";
+import {
+	Brands,
+	Features,
+	Home,
+	Pricing,
+	Sectors,
+	Solutions,
+	Why,
+	PreFooter,
+	Cloud,
+	Technologies,
+} from "../component/index";
 
 const Index = () => {
 	return (
@@ -8,7 +19,9 @@ const Index = () => {
 			<Brands />
 			<Sectors />
 			<Features />
+			<Cloud />
 			<Solutions />
+			<Technologies />
 			<Pricing />
 			<Why />
 			<PreFooter />
