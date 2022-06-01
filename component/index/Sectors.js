@@ -1,6 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+const SECTORS = [
+	{
+		title: "Retail Digital Singnage",
+		img: "img-1",
+	},
+	{
+		title: "Digital Menu Boards",
+		img: "img-2",
+	},
+	{
+		title: "Corporate Digital Singnage",
+		img: "img-3",
+	},
+	{
+		title: "Education Digital Singnage",
+		img: "img-4",
+	},
+];
 
 const Sectors = () => {
 	return (
@@ -17,34 +41,29 @@ const Sectors = () => {
 							</div>
 						</div>
 					</ScrollAnimation>
-
-					<div className='sectors'>
-						<ScrollAnimation animateOnce animateIn='fadeInUp'>
-							<Link href='/restaurant'>
-								<div className='sector'>
-									<div className='container-img'>
-										<div className='img-wrapper'>
-											<Image src='/img/sectors/restaurant.png' width={323} height={184} objectFit='contain' />
-										</div>
-									</div>
-									<p>Restaurant</p>
-								</div>
-							</Link>
-						</ScrollAnimation>
-						<ScrollAnimation animateOnce animateIn='fadeInUp' delay={300}>
-							<Link href='/education'>
-								<div className='sector'>
-									<div className='container-img'>
-										<div className='img-wrapper'>
-											<Image src='/img/sectors/education.png' width={323} height={184} objectFit='contain' />
-										</div>
-									</div>
-									<p>Education</p>
-								</div>
-							</Link>
-						</ScrollAnimation>
-					</div>
 				</div>
+
+				<ScrollAnimation animateOnce animateIn='fadeInUp'>
+					<div style={{ marginTop: 50, paddingBottom: 50 }}>
+						<Swiper
+							spaceBetween={23}
+							slidesPerView={3.5}
+							centeredSlides={true}
+							loop={true}
+							allowTouchMove={true}
+							modules={[Pagination]}
+							pagination={{
+								clickable: true,
+							}}
+							className='sectors-slider'>
+							{SECTORS.map(({ title, img }, i) => (
+								<SwiperSlide key={i}>
+									<Sector title={title} img={img} />
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</div>
+				</ScrollAnimation>
 			</section>
 
 			<style jsx>{`
@@ -62,42 +81,6 @@ const Sectors = () => {
 					margin-bottom: 43px;
 				}
 
-				.sectors {
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					gap: 40px;
-				}
-
-				.container-img {
-					width: 100%;
-					border-radius: 25px;
-					border: 5px solid #e9e9e9;
-					padding: 66px 10px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					cursor: pointer;
-				}
-
-				.container-img:hover {
-					border: 5px solid #5463ff;
-				}
-
-				.img-wrapper {
-					transition: all 500ms ease;
-				}
-
-				.container-img:hover .img-wrapper {
-					transform: scale(0.75);
-				}
-
-				p {
-					font-size: 28px;
-					text-align: center;
-					color: #101010;
-					margin-top: 25px;
-				}
-
 				@media only screen and (max-width: 1023px) {
 					section {
 						margin-top: 70px;
@@ -108,12 +91,26 @@ const Sectors = () => {
 						padding-left: 36px;
 					}
 				}
+			`}</style>
+		</>
+	);
+};
 
-				@media only screen and (max-width: 767px) {
-					.sectors {
-						grid-template-columns: 1fr;
-						gap: 25px;
-					}
+const Sector = ({ title, img }) => {
+	return (
+		<>
+			<div className='sector'>
+				<Image src={`/img/sectors/${img}.png`} title={title} width={350} height={250} objectFit='contain' />
+				<h5 style={{ marginTop: 30 }}>{title}</h5>
+			</div>
+
+			<style jsx>{`
+				.sector {
+					width: 100%;
+					height: fit-content;
+					padding: 36px 42px 32px;
+					background-color: #f6f7ff;
+					border-radius: 15px;
 				}
 			`}</style>
 		</>

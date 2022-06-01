@@ -41,7 +41,7 @@ const Home = () => {
 								setType(activeIndex === 0 ? OPTIONS[OPTIONS.length - 1] : OPTIONS[activeIndex - 1]);
 							}}
 							className='home-slider'>
-							<div className='options display-desktop'>
+							<div className='options'>
 								{OPTIONS.map((elm, i) => (
 									<Tab key={i} index={i} value={elm} isActive={type === elm} setter={setType} />
 								))}
