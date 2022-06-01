@@ -53,17 +53,11 @@ const Home = () => {
 							{OPTIONS.map((elm, i) => (
 								<SwiperSlide key={i}>
 									<div className='img-container'>
-										<Image src={`/img/home/${elm}.png`} title={type} layout='fill' objectFit='contain' />
+										<Image src={`/img/home/${elm}.png`} title={type} width={964} height={542} objectFit='cover' />
 									</div>
 								</SwiperSlide>
 							))}
 						</Swiper>
-
-						<div className='display-mobile'>
-							<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
-								<div className='btn btn-free-trial'>Free trial</div>
-							</a>
-						</div>
 					</div>
 				</div>
 
@@ -128,21 +122,19 @@ const Home = () => {
 				}
 
 				.img-container {
-					width: 100%;
-					height: 700px;
-					margin-top: 20px;
+					margin-top: 100px;
 					position: relative;
-					pointer-events: none;
 				}
 
-				@media only screen and (max-width: 950px) {
-					.display-desktop {
-						display: none;
-						clear: both;
+				@media only screen and (max-width: 500px) {
+					.options {
+						gap: 15px;
 					}
+				}
 
-					.display-mobile {
-						display: block;
+				@media only screen and (max-width: 388px) {
+					.options {
+						gap: 10px;
 					}
 				}
 			`}</style>
@@ -169,6 +161,18 @@ const Tab = ({ value, index, isActive, setter }) => {
 					font-weight: 600;
 					cursor: pointer;
 					text-transform: capitalize;
+				}
+
+				@media only screen and (max-width: 500px) {
+					div {
+						font-size: 16px;
+					}
+				}
+
+				@media only screen and (max-width: 388px) {
+					div {
+						font-size: 12px;
+					}
 				}
 			`}</style>
 		</>

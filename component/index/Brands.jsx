@@ -58,10 +58,6 @@ const Brands = () => {
 				}
 
 				@media only screen and (max-width: 950px) {
-					section {
-						margin-top: 24px;
-					}
-
 					.container {
 						padding-right: 0px;
 						padding-left: 0px;
