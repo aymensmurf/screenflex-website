@@ -156,17 +156,12 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 								</li>
 								<li>
 									<a>
-										<Link href='/#how-it-works'>How it works</Link>
+										<Link href='/#features'>Features</Link>
 									</a>
 								</li>
 								<li>
 									<a>
 										<Link href='/#pricing'>Pricing</Link>
-									</a>
-								</li>
-								<li>
-									<a>
-										<Link href='/#features'>Features</Link>
 									</a>
 								</li>
 							</ul>
