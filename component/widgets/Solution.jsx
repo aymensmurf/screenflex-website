@@ -43,7 +43,8 @@ const Solution = ({ img, title, description }) => {
 				.title {
 					font-weight: 600;
 					font-size: 28px;
-					line-height: 38px;
+					line-height: 30px;
+					text-transform: uppercase;
 				}
 
 				.description {

@@ -1,44 +1,38 @@
 import Image from "next/image";
 
-const PricingCard = ({ type, title, price, duration, description, options }) => {
+const PricingCard = ({
+	type,
+	details: { title, priceMonth, priceYear, noPrice, description, options, buttonTitle, buttonDescription },
+}) => {
 	return (
 		<>
 			<div className={title === "Premium" ? "pricing active" : "pricing"}>
-				<p className='title'>{title}</p>
-				{duration ? (
-					<div className='flex ai-fs jc-c' style={{ gap: 30, marginTop: 10, height: 48 }}>
-						<p className='price'>${price * (type === "monthly" ? 1 : 10)}</p>
-						<p className='duration'>{title === "Premium" && type !== "monthly" ? "/ Yearly" : duration}</p>
-					</div>
-				) : (
-					<div style={{ marginTop: 10, height: 48 }}>
-						<p className='price-no-duration'>{price}</p>
-					</div>
-				)}
-
-				<p className='desc'>{description}</p>
-
-				<div className='options' style={{ marginTop: 33 }}>
-					{options.map(({ title: optionTitle, checked }, i) => (
-						<div key={i} className='flex ai-c' style={{ gap: 19, marginBottom: 22 }}>
-							{checked ? (
-								title === "Premium" ? (
-									<Image src='/img/pricing/checked-white.svg' width={16} height={10} objectFit='contain' />
-								) : (
-									<Image src='/img/pricing/checked.svg' width={16} height={10} objectFit='contain' />
-								)
-							) : (
-								<div style={{ width: 16, height: 10 }} />
-							)}
-
-							<p className='option' style={{ color: checked ? "#121d2a" : "#abbac3" }}>
-								{optionTitle}
-							</p>
+				<div>
+					<p className='title'>{title}</p>
+					{!noPrice && (
+						<div className='flex ai-fs jc-c' style={{ gap: 30, marginTop: 10, height: 48 }}>
+							<p className='price'>${type === "monthly" ? priceMonth : priceYear}</p>
+							<p className='duration'>{type === "monthly" ? "/ Month" : "/ Year"}</p>
 						</div>
-					))}
+					)}
+
+					<p className='desc'>{description}</p>
+
+					<div className='options' style={{ marginTop: 33 }}>
+						{options.map(({ title: optionTitle, checked }, i) => (
+							<div key={i} className='flex ai-c' style={{ marginBottom: 10 }}>
+								<p className='option' style={{ color: checked ? "#121d2a" : "#abbac3" }}>
+									- {optionTitle}
+								</p>
+							</div>
+						))}
+					</div>
 				</div>
 
-				<div className='btn'>Choose Plan</div>
+				<div style={{ marginTop: 35 }}>
+					<p className='nb'>{buttonDescription}</p>
+					<div className='btn'>{buttonTitle}</div>
+				</div>
 			</div>
 
 			<style jsx>{`
@@ -48,6 +42,10 @@ const PricingCard = ({ type, title, price, duration, description, options }) => 
 					border-bottom-right-radius: 30px;
 					border: 1px solid #5463ff;
 					cursor: pointer;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
 				}
 
 				.active {
@@ -99,6 +97,10 @@ const PricingCard = ({ type, title, price, duration, description, options }) => 
 					font-size: 15px;
 				}
 
+				.nb {
+					font-size: 12px;
+				}
+
 				.btn {
 					width: 100%;
 					padding: 15px 40px;
@@ -107,7 +109,7 @@ const PricingCard = ({ type, title, price, duration, description, options }) => 
 					font-weight: 600;
 					font-size: 15px;
 					color: #5463ff;
-					margin-top: 35px;
+					margin-top: 10px;
 				}
 			`}</style>
 		</>

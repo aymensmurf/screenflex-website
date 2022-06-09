@@ -11,13 +11,10 @@ const Solutions = () => {
 				<div className='container'>
 					<ScrollAnimation animateOnce animateIn='fadeInUp'>
 						<div className='flex ai-fs jc-sb'>
-							<div>
-								<h2>Take your client communication</h2>
-								<div className='flex ai-fs'>
-									<h2>the next level with Screenflex.</h2>
-									<div className='display-desktop'>
-										<Image src='/img/solution/solution.png' width={60} height={60} objectFit='contain' />
-									</div>
+							<div className='flex ai-fs'>
+								<h2>Display any content flawlessly</h2>
+								<div className='display-desktop'>
+									<Image src='/img/solution/solution.png' width={60} height={60} objectFit='contain' />
 								</div>
 							</div>
 

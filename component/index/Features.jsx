@@ -12,12 +12,7 @@ const Features = () => {
 				<div className='container'>
 					<div className='features'>
 						<ScrollAnimation animateOnce animateIn='fadeInUp'>
-							<div className='flex ai-c jc-c'>
-								<div className='display-desktop'>
-									<Image src='/img/features/money.png' width={77} height={77} objectFit='contain' />
-								</div>
-								<h3>How can Screenflex help your business?</h3>
-							</div>
+							<h3>An intuitive, single pane content management experience</h3>
 						</ScrollAnimation>
 
 						<div className='display-desktop-features' style={{ marginTop: 68 }}>

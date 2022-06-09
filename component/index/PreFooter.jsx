@@ -8,7 +8,7 @@ const PreFooter = () => {
 				<div className='container'>
 					<div className='pre-footer'>
 						<ScrollAnimation animateOnce animateIn='fadeInUp'>
-							<h2>Screenflex makes managing screens easy</h2>
+							<h2>Display any type of content on your screens quickly and easily</h2>
 						</ScrollAnimation>
 
 						<ScrollAnimation animateOnce animateIn='fadeInUp'>

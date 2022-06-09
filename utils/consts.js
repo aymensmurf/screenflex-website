@@ -40,120 +40,118 @@ export const FEATURES = [
 export const SOLUTIONS = [
 	{
 		img: "/img/solution/1.png",
-		title: "1 ACCESSIBLE FOR EVERYONE.",
+		title: "1 Secure and simple content management.",
 		description:
-			"Whether you're a beginner or an experienced designer, Screenflex will make the design process easier for you. With our simple drag-and-drop tools as well as easy-to-use and customizable gadgets, thesky is the limit.",
+			"Whether you're a beginner or an experienced designer, Screenflex will make the design process easier for you. With our simple drag-and-drop tools as well as easy-to-use and customizable gadgets, the sky is the limit.",
 	},
 	{
 		img: "/img/solution/2.png",
-		title: "2 STRONGER CUSTOMER TRUST.",
+		title: "2 Set up on any hardware.",
 		description:
-			"Communicate valuable information and eye-catching messages, in-store discounts, promotions, and dynamic advertising at a critical time: while they are considering making a purchase.",
+			"Screenflex renders your content on any system on chip screen or external media player device in pixel perfect quality.",
 	},
 	{
 		img: "/img/solution/3.png",
-		title: "3 OPTIMIZED DIGITAL SIGNAGE.",
-		description:
-			"Manage your screens professionally and securely, the solution helps you to easily create, share and control your marketing messages on any digital display, from anywhere you want.",
+		title: "3 Monitor screens from anywhere.",
+		description: "Check all of your screen and player statuses quickly and efficiently. ",
 	},
 ];
 
 export const PRICING = [
 	{
 		title: "Free Trial",
-		price: 0,
-		duration: "/ 14 Days",
-		description: "This is our most affordable plan to get started!",
+		priceMonth: 6,
+		priceYear: 5,
+		description: "Enterprise-grade security and control",
 		options: [
 			{
-				title: "Unlimited Screens",
+				title: "Screen designer Layouts with Zones/Regions",
 				checked: true,
 			},
 			{
-				title: "Full features",
+				title: "Upload multimedia content  and Document Files",
 				checked: true,
 			},
 			{
-				title: "Emails Back up",
+				title: "Use YouTube and Web Pages",
 				checked: true,
 			},
 			{
-				title: "Screens Planing",
+				title: "Free Stock Images & Videos",
 				checked: true,
 			},
 			{
-				title: "Email support",
-				checked: false,
+				title: "Scheduling",
+				checked: true,
 			},
 			{
-				title: "Free design services",
-				checked: false,
+				title: "Playlists",
+				checked: true,
+			},
+			{
+				title: "Overlays",
+				checked: true,
 			},
 		],
+		buttonTitle: "Start free trial",
+		buttonDescription: "No need to enter credit card details",
 	},
 	{
 		title: "Premium",
-		price: 8,
-		duration: "/ Month",
-		description: "896 of our clients choose this plan. Get the best value.",
+		priceMonth: 12,
+		priceYear: 10,
+		description: "",
 		options: [
 			{
-				title: "Unlimited Screens",
+				title: "All the Pro plan +the magic",
 				checked: true,
 			},
 			{
-				title: "Full features",
+				title: "Multiscreen",
 				checked: true,
 			},
 			{
-				title: "Emails Back up",
+				title: "Human Motion Tracking",
 				checked: true,
 			},
 			{
-				title: "Screens Planing",
+				title: "Gesture Recognition",
 				checked: true,
 			},
 			{
-				title: "Email support",
-				checked: false,
-			},
-			{
-				title: "Free design services",
-				checked: false,
+				title: "AI",
+				checked: true,
 			},
 		],
+		buttonTitle: "Get Demo",
+		buttonDescription: "",
 	},
 	{
-		title: "Enterprise",
+		title: "Become a Partner",
 		price: "Costume price",
-		duration: "",
-		description: "For larger business or those seeking advanced services.",
+		noPrice: true,
+		description:
+			"Talk to our software and business experts today about how to plan and execute the smart digital signage that’s simple to start and easy to grow.",
 		options: [
 			{
-				title: "Unlimited Screens",
+				title: "Demo licenses for in-house use",
 				checked: true,
 			},
 			{
-				title: "Full features",
+				title: "Dedicated account manager",
 				checked: true,
 			},
 			{
-				title: "Emails Back up",
+				title: "Custom layout",
 				checked: true,
 			},
 			{
-				title: "Screens Planing",
-				checked: true,
-			},
-			{
-				title: "Email support",
-				checked: true,
-			},
-			{
-				title: "Free design services",
+				title: "Marketing kit with your brand",
 				checked: true,
 			},
 		],
+		buttonTitle: "Contact us",
+		buttonDescription: "",
 	},
 ];
 
@@ -305,5 +303,28 @@ export const RESTAURANT_SECTIONS = [
 		title: "Display promotions",
 		description:
 			"What better way to show promotional items and daily specials and then put them on a digital billboard while the customer waits to order? This can increase last-minute purchase decisions, inform customers of new menu items and build brand awareness. It also gives customers something to look at while they wait in line.",
+	},
+];
+
+export const BRANDS = [
+	{
+		title: "The Journey",
+		img: "journey",
+	},
+	{
+		title: "Wifak Bank",
+		img: "wifak",
+	},
+	{
+		title: "Sesame University",
+		img: "sesame",
+	},
+	{
+		title: "BOS",
+		img: "bos",
+	},
+	{
+		title: "Carthage Solution",
+		img: "carthage",
 	},
 ];

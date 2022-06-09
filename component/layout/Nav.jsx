@@ -173,9 +173,14 @@ const Nav = ({ isStaticNav = false, transparent = false }) => {
 						</div>
 
 						<div className='display-desktop'>
-							<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
-								<div className='btn-free-trial'>Free trial</div>
-							</a>
+							<div className='flex ai-c' style={{ gap: 15 }}>
+								<a href='https://app.screenflex.pro/login' target='_blank' rel='noopener noreferrer'>
+									Login
+								</a>
+								<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>
+									<div className='btn-free-trial'>Free trial</div>
+								</a>
+							</div>
 						</div>
 
 						<div className='display-mobile'>

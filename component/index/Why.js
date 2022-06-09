@@ -35,7 +35,7 @@ const Why = () => {
 
 			<style jsx>{`
 				section {
-					margin-top: 145px;
+					margin-top: 80px;
 					text-align: left;
 				}
 

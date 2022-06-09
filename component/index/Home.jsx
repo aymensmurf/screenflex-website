@@ -29,8 +29,11 @@ const Home = () => {
 			<section>
 				<div className='container'>
 					<div className='flex flex-column ai-c' style={{ position: "relative", zIndex: 1 }}>
-						<h1>All screens, One place.</h1>
-						<p>Manage screens. Deliver world class experiences. Make the best out of digital signage.</p>
+						<h1>
+							Magic experiences <br />
+							for real world
+						</h1>
+						<p>Screenflex is the next generation audience engagement make every store a flagship experience</p>
 
 						<Swiper
 							slidesPerView={1}

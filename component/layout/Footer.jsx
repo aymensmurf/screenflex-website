@@ -7,10 +7,9 @@ const Footer = () => {
 			<footer>
 				<div className='bg'>
 					<div className='container flex flex-column ai-c'>
-						<h3 className='title'>Take your client communication to the next level with Screenflex.</h3>
+						<h3 className='title'>Bring your favorite content to life</h3>
 						<p className='desc'>
-							Be the first to know when Screenflex launches. Early access users will receive an extended free trial and
-							early bird pricing options.
+							Unlock the power of digital signage with our smart, easy, professional and affordable solution.
 						</p>
 
 						<a href='https://app.screenflex.pro/signup' target='_blank' rel='noreferrer noopener'>

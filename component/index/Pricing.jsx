@@ -48,16 +48,9 @@ const Pricing = () => {
 					</ScrollAnimation>
 
 					<div className='grid' style={{ marginTop: 48 }}>
-						{PRICING.map(({ title, price, duration, description, options }, i) => (
+						{PRICING.map((details, i) => (
 							<ScrollAnimation key={i} animateOnce animateIn='fadeInUp' delay={200 * i}>
-								<PricingCard
-									type={type}
-									title={title}
-									price={price}
-									duration={duration}
-									description={description}
-									options={options}
-								/>
+								<PricingCard type={type} details={details} />
 							</ScrollAnimation>
 						))}
 					</div>

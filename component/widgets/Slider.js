@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import "swiper/css";
 
 const Slider = ({ slides = [] }) => {
@@ -18,7 +19,10 @@ const Slider = ({ slides = [] }) => {
 						grabCursor={true}
 						centeredSlides={true}
 						navigation={false}
-						autoplay={true}
+						modules={[Autoplay]}
+						autoplay={{
+							delay: 2500,
+						}}
 						className='mySlider'
 						breakpoints={{
 							1540: {

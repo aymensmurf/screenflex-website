@@ -1,5 +1,8 @@
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import { BRANDS } from "../../utils/consts";
 
 const Brands = () => {
 	return (
@@ -11,34 +14,42 @@ const Brands = () => {
 					</ScrollAnimation>
 
 					<ScrollAnimation animateOnce animateIn='fadeInUp'>
-						<div className='brands flex ai-c jc-sb' style={{ gap: 40 }}>
-							<div className='img-wrapper'>
-								<Image src='/img/brands/journey.png' alt='TheJourney' layout='fill' objectFit='contain' />
-							</div>
-
-							<div className='img-wrapper'>
-								<Image src='/img/brands/wifak.png' alt='Wifak Bank' layout='fill' objectFit='contain' />
-							</div>
-
-							<div className='img-wrapper'>
-								<Image src='/img/brands/sesame.png' alt='Sesame University' layout='fill' objectFit='contain' />
-							</div>
-
-							<div className='img-wrapper'>
-								<Image src='/img/brands/bos.png' alt='BOS' layout='fill' objectFit='contain' />
-							</div>
-
-							<div className='img-wrapper'>
-								<Image src='/img/brands/carthage.png' alt='Carthage Solution' layout='fill' objectFit='contain' />
-							</div>
-						</div>
+						<Swiper
+							spaceBetween={40}
+							slidesPerView={2}
+							centeredSlides={true}
+							loop={true}
+							allowTouchMove={true}
+							modules={[Autoplay]}
+							autoplay={{
+								delay: 2000,
+							}}
+							breakpoints={{
+								855: {
+									slidesPerView: 5,
+								},
+								640: {
+									slidesPerView: 3.2,
+								},
+								400: {
+									slidesPerView: 3.2,
+								},
+							}}>
+							{BRANDS.map(({ title, img }, i) => (
+								<SwiperSlide key={i}>
+									<div className='img-wrapper'>
+										<Image src={`/img/brands/${img}.png`} alt={title} layout='fill' objectFit='contain' />
+									</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
 					</ScrollAnimation>
 				</div>
 			</section>
 
 			<style jsx>{`
 				section {
-					margin-top: 60px;
+					margin-top: 140px;
 				}
 
 				.container {
